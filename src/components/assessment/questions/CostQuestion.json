@@ -1,0 +1,387 @@
+[
+    {
+        "QuestionId": "cloud-financial-management",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you implement cloud financial management?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_cloud_financial_management_function",
+                "Title": "Establish a cost optimization function",
+                "Description": "Create a team that is responsible for establishing and\n                 maintaining cost awareness across your organization. The team requires people from finance,\n                 technology, and business roles across the organization.\n\t\t      "
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_partnership",
+                "Title": "Establish a partnership between finance and technology",
+                "Description": "Involve finance and technology teams in cost\n                    and usage discussions at all stages of your cloud journey. Teams regularly meet and discuss topics such\n                    as organizational goals and targets, current state of cost and usage, and financial and accounting\n                    practices.\n                "
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_budget_forecast",
+                "Title": "Establish cloud budgets and forecasts",
+                "Description": "Adjust existing organizational budgeting and forecasting\n                    processes to be compatible with the highly variable nature of cloud costs and usage. Processes must be\n                    dynamic using trend based or business driver-based algorithms, or a combination.\n                "
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_cost_awareness",
+                "Title": "Implement cost awareness in your organizational processes",
+                "Description": "Implement cost awareness into new or\n                    existing processes that impact usage, and leverage existing processes for cost awareness. Implement\n                    cost awareness into employee training.\n                "
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_usage_report",
+                "Title": "Report and notify on cost optimization",
+                "Description": "Configure AWS Budgets to provide notifications on cost and\n                    usage against targets. Have regular meetings to analyze this workload's cost efficiency and to promote\n                    cost aware culture."
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_proactive_process",
+                "Title": "Monitor cost proactively",
+                "Description": "Implement tooling and dashboards to monitor cost proactively for the\n                    workload. Do not just look at costs and categories when you receive notifications. This helps to identify\n                    positive trends and promote them throughout your organization."
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_scheduled",
+                "Title": "Keep up to date with new service releases",
+                "Description": "Consult regularly with experts or APN Partners to consider\n                    which services and features provide lower cost. Review AWS blogs and other information sources.\n                "
+            },
+            {
+                "ChoiceId": "cost_cloud_financial_management_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "govern-usage",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you govern usage?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_govern_usage_policies",
+                "Title": "Develop policies based on your organization requirements",
+                "Description": "Develop policies that define how resources\n               are managed by your organization. Policies should cover cost aspects of resources and workloads,\n               including creation, modification and decommission over the resource lifetime.\n\t\t\t   "
+            },
+            {
+                "ChoiceId": "cost_govern_usage_goal_target",
+                "Title": "Implement goals and targets",
+                "Description": "Implement both cost and usage goals for your workload. Goals provide\n               direction to your organization on cost and usage, and targets provide measurable outcomes for your\n               workloads.\n            "
+            },
+            {
+                "ChoiceId": "cost_govern_usage_account_structure",
+                "Title": "Implement an account structure",
+                "Description": "Implement a structure of accounts that maps to your organization. This assists in allocating and\n\t\t\t\tmanaging costs throughout your organization."
+            },
+            {
+                "ChoiceId": "cost_govern_usage_groups_roles",
+                "Title": "Implement groups and roles",
+                "Description": "Implement groups and roles that align to your policies and control who\n               can create, modify, or decommission instances and resources in each group. For example, implement\n               development, test, and production groups. This applies to AWS services and third-party solutions."
+            },
+            {
+                "ChoiceId": "cost_govern_usage_controls",
+                "Title": "Implement cost controls",
+                "Description": "Implement controls based on organization policies and defined groups and\n               roles. These ensure that costs are only incurred as defined by organization requirements: for example,\n               control access to regions or resource types with IAM policies."
+            },
+            {
+                "ChoiceId": "cost_govern_usage_track_lifecycle",
+                "Title": "Track project lifecycle",
+                "Description": "Track, measure, and audit the lifecycle of projects, teams, and environments to\n               avoid using and paying for unnecessary resources."
+            },
+            {
+                "ChoiceId": "cost_govern_usage_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "monitor-usage",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you monitor usage and cost?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_monitor_usage_detailed_source",
+                "Title": "Configure detailed information sources",
+                "Description": "Configure the AWS Cost and Usage Report, and Cost Explorer\n               hourly granularity, to provide detailed cost and usage information. Configure your workload to have log\n               entries for every delivered business outcome."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_define_attribution",
+                "Title": "Identify cost attribution categories",
+                "Description": "Identify organization categories that could be used to allocate cost\n               within your organization."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_define_kpi",
+                "Title": "Establish organization metrics",
+                "Description": "Establish the organization metrics that are required for this workload.\n               Example metrics of a workload are customer reports produced or web pages served to customers."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_config_tools",
+                "Title": "Configure billing and cost management tools",
+                "Description": "Configure AWS Cost Explorer and AWS Budgets inline\n               with your organization policies."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_org_information",
+                "Title": "Add organization information to cost and usage",
+                "Description": "Define a tagging schema based on organization, and\n               workload attributes, and cost allocation categories. Implement tagging across all resources. Use Cost\n               Categories to group costs and usage according to organization attributes."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_allocate_outcome",
+                "Title": "Allocate costs based on workload metrics",
+                "Description": "Allocate the workload's costs by metrics or business\n               outcomes to measure workload cost efficiency. Implement a process to analyze the AWS Cost and Usage\n               Report with Amazon Athena, which can provide insight and charge back capability."
+            },
+            {
+                "ChoiceId": "cost_monitor_usage_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "decomissioning-resources",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you decommission resources?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_decomissioning_resources_track",
+                "Title": "Track resources over their life time",
+                "Description": "Define and implement a method to track resources and their\n               associations with systems over their life time. You can use tagging to identify the workload or function\n               of the resource."
+            },
+            {
+                "ChoiceId": "cost_decomissioning_resources_implement_process",
+                "Title": "Implement a decommissioning process",
+                "Description": "Implement a process to identify and decommission orphaned\n               resources."
+            },
+            {
+                "ChoiceId": "cost_decomissioning_resources_decommission",
+                "Title": "Decommission resources",
+                "Description": "Decommission resources triggered by events such as periodic audits, or\n               changes in usage. Decommissioning is typically performed periodically, and is manual or automated."
+            },
+            {
+                "ChoiceId": "cost_decomissioning_resources_decomm_automated",
+                "Title": "Decommission resources automatically",
+                "Description": "Design your workload to gracefully handle resource\n               termination as you identify and decommission non-critical resources, resources that are not required, or\n               resources with low utilization."
+            },
+            {
+                "ChoiceId": "cost_decomissioning_resources_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "select-service",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you evaluate cost when you select services?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_select_service_requirements",
+                "Title": "Identify organization requirements for cost",
+                "Description": "Work with team members to define the balance between\n               cost optimization and other pillars, such as performance and reliability, for this workload."
+            },
+            {
+                "ChoiceId": "cost_select_service_analyze_all",
+                "Title": "Analyze all components of this workload",
+                "Description": "Ensure every workload component is analyzed, regardless of\n               current size or current costs. Review effort should reflect potential benefit, such as current and\n               projected costs."
+            },
+            {
+                "ChoiceId": "cost_select_service_thorough_analysis",
+                "Title": "Perform a thorough analysis of each component",
+                "Description": "Look at overall cost to the organization of each\n               component. Look at total cost of ownership by factoring in cost of operations and management,\n               especially when using managed services. Review effort should reflect potential benefit: for example,\n               time spent analyzing is proportional to component cost.\n\t\t\t\t"
+            },
+            {
+                "ChoiceId": "cost_select_service_licensing",
+                "Title": "Select software with cost effective licensing",
+                "Description": "Open source software will eliminate software licensing\n               costs, which can contribute significant costs to workloads. Where licensed software is required, avoid\n               licenses bound to arbitrary attributes such as CPUs, look for licenses that are bound to output or\n               outcomes. The cost of these licenses scales more closely to the benefit they provide.\n            "
+            },
+            {
+                "ChoiceId": "cost_select_service_select_for_cost",
+                "Title": "Select components of this workload to optimize cost in line with organization priorities",
+                "Description": "Factor in cost\n               when selecting all components. This includes using application level and managed services, such as\n               Amazon RDS, Amazon DynamoDB, Amazon SNS, and Amazon SES to reduce overall organization cost.\n               Use serverless and containers for compute, such as AWS Lambda, Amazon S3 for static websites, and\n               Amazon ECS. Minimize license costs by using open source software, or software that does not have\n               license fees: for example, Amazon Linux for compute workloads or migrate databases to Amazon\n               Aurora."
+            },
+            {
+                "ChoiceId": "cost_select_service_analyze_over_time",
+                "Title": "Perform cost analysis for different usage over time",
+                "Description": "Workloads can change over time. Some services or\n               features are more cost effective at different usage levels. By performing the analysis on each\n               component over time and at projected usage, you ensure the workload remains cost effective over its\n               lifetime.."
+            },
+            {
+                "ChoiceId": "cost_select_service_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "type-size-number-resources",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you meet cost targets when you select resource type, size and number?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_type_size_number_resources_cost_modeling",
+                "Title": "Perform cost modeling",
+                "Description": "Identify organization requirements and perform cost modeling of the workload\n               and each of its components. Perform benchmark activities for the workload under different predicted\n               loads and compare the costs. The modeling effort should reflect potential benefit: for example, time\n               spent is proportional to component cost.\n\t\t\t\t"
+            },
+            {
+                "ChoiceId": "cost_type_size_number_resources_data",
+                "Title": "Select resource type, size, and number based on data",
+                "Description": "Select resource size or type based on data about the\n               workload and resource characteristics: for example, compute, memory, throughput, or write intensive.\n               This selection is typically made using a previous version of the workload (such as an on-premises\n               version), using documentation, or using other sources of information about the workload."
+            },
+            {
+                "ChoiceId": "cost_type_size_number_resources_metrics",
+                "Title": "Select resource type, size, and number automatically based on metrics",
+                "Description": "Use metrics from the currently running\n               workload to select the right size and type to optimize for cost. Appropriately provision throughput,\n               sizing, and storage for services such as Amazon EC2, Amazon DynamoDB, Amazon EBS (PIOPS), Amazon\n               RDS, Amazon EMR, and networking. This can be done with a feedback loop such as automatic scaling or\n               by custom code in the workload."
+            },
+            {
+                "ChoiceId": "cost_type_size_number_resources_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "pricing-model",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you use pricing models to reduce cost?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_pricing_model_analysis",
+                "Title": "Perform pricing model analysis",
+                "Description": "Analyze each component of the workload. Determine if the component\n               and resources will be running for extended periods (for commitment discounts), or dynamic and short\n               running (for spot or on-demand). Perform an analysis on the workload using the Recommendations\n               feature in AWS Cost Explorer."
+            },
+            {
+                "ChoiceId": "cost_pricing_model_region_cost",
+                "Title": "Implement regions based on cost",
+                "Description": "Resource pricing can be different in each region. Factoring in region\n               cost ensures you pay the lowest overall price for this workload"
+            },
+            {
+                "ChoiceId": "cost_pricing_model_third_party",
+                "Title": "Select third party agreements with cost efficient terms",
+                "Description": "Cost efficient agreements and terms ensure the\n               cost of these services scales with the benefits they provide. Select agreements and pricing that scale\n               when they provide additional benefits to your organization.\n            "
+            },
+            {
+                "ChoiceId": "cost_pricing_model_implement_models",
+                "Title": "Implement pricing models for all components of this workload",
+                "Description": "Permanently running resources should\n               utilize reserved capacity such as Savings Plans or reserved Instances. Short term capacity is configured to\n               use Spot Instances, or Spot Fleet. On demand is only used for short-term workloads that cannot be\n               interrupted and do not run long enough for reserved capacity, between 25% to 75% of the period,\n               depending on the resource type.\n\t\t\t\t"
+            },
+            {
+                "ChoiceId": "cost_pricing_model_master_analysis",
+                "Title": "Perform pricing model analysis at the master account level",
+                "Description": "Use Cost Explorer Savings Plans and\n               Reserved Instance recommendations to perform regular analysis at the master account level for\n               commitment discounts.\n            "
+            },
+            {
+                "ChoiceId": "cost_pricing_model_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "data-transfer",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you plan for data transfer charges?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_data_transfer_modeling",
+                "Title": "Perform data transfer modeling",
+                "Description": "Gather organization requirements and perform data transfer modeling\n               of the workload and each of its components. This identifies the lowest cost point for its current data\n               transfer requirements."
+            },
+            {
+                "ChoiceId": "cost_data_transfer_optimized_components",
+                "Title": "Select components to optimize data transfer cost",
+                "Description": "All components are selected, and architecture is\n               designed to reduce data transfer costs. This includes using components such as WAN optimization and\n               Multi-AZ configurations"
+            },
+            {
+                "ChoiceId": "cost_data_transfer_implement_services",
+                "Title": "Implement services to reduce data transfer costs",
+                "Description": "Implement services to reduce data transfer: for\n               example, using a CDN such as Amazon CloudFront to deliver content to end users, caching layers using\n               Amazon ElastiCache, or using AWS Direct Connect instead of VPN for connectivity to AWS."
+            },
+            {
+                "ChoiceId": "cost_data_transfer_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "manage-demand-resources",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you manage demand, and supply resources?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_manage_demand_resources_cost_analysis",
+                "Title": "Perform an analysis on the workload demand",
+                "Description": "Analyze the demand of the workload over time. Ensure\n               the analysis covers seasonal trends and accurately represents operating conditions over the full\n               workload lifetime. Analysis effort should reflect potential benefit: for example, time spent is\n               proportional to the workload cost."
+            },
+            {
+                "ChoiceId": "cost_manage_demand_resources_buffer_throttle",
+                "Title": "Implement a buffer or throttle to manage demand",
+                "Description": "Buffering and throttling modify the demand on\n               your workload, smoothing out any peaks. Implement throttling when your clients perform retries.\n               Implement buffering to store the request and defer processing until a later time. Ensure your throttles\n               and buffers are designed so clients receive a response in the required time.\n            "
+            },
+            {
+                "ChoiceId": "cost_manage_demand_resources_dynamic",
+                "Title": "Supply resources dynamically",
+                "Description": "Resources are provisioned in a planned manner. This can be demand-\n               based, such as through automatic scaling, or time-based, where demand is predictable and resources\n               are provided based on time. These methods result in the least amount of over or under provisioning."
+            },
+            {
+                "ChoiceId": "cost_manage_demand_resources_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "evaluate-new-services",
+        "PillarId": "costOptimization",
+        "QuestionTitle": "How do you evaluate new services?",
+        "Choices": [
+            {
+                "ChoiceId": "cost_evaluate_new_services_review_process",
+                "Title": "Develop a workload review process",
+                "Description": "Develop a process that defines the criteria and process for\n               workload review. The review effort should reflect potential benefit: for example, core workloads or\n               workloads with a value of over 10% of the bill are reviewed quarterly, while workloads below 10% are\n               reviewed annually."
+            },
+            {
+                "ChoiceId": "cost_evaluate_new_services_review_workload",
+                "Title": "Review and analyze this workload regularly",
+                "Description": "Existing workloads are regularly reviewed as per defined\n               processes."
+            },
+            {
+                "ChoiceId": "cost_evaluate_new_services_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    }
+]

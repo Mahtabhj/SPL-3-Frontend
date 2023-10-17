@@ -1,0 +1,15 @@
+// @include media-max(1140px) { width:80%; }
+@mixin media-max($max-width) {
+  @media only screen and (max-width: $max-width) { @content; }
+}
+
+// @include media-min(360px) { width:80%; }
+@mixin media-min($min-width) {
+  @media only screen and (min-width: $min-width) { @content; }
+}
+
+// rem to pixel
+@function rem($size) {
+  @return calc($size / 16px) * 1rem;
+}
+

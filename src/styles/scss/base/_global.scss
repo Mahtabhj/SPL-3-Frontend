@@ -1,0 +1,64 @@
+// Theme Name:
+// Theme URI:
+// Author:
+// Author URI: https://
+// Version: 1.0
+
+//Global Style
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #f8f8f9;
+}
+
+img, picture, svg, video{
+    display: block;
+    max-width: 100%;
+}
+input, textarea, button, select{
+    font: inherit;
+}
+:focus{
+	box-shadow: none;
+}
+:disabled {
+       cursor: not-allowed;
+}
+body{
+	font-family: 'Open sans' !important ;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: $header-font;
+}
+h1{
+    font-size: 72px;
+}
+h2{
+    font-size: 48px;
+}
+h3{
+    font-size: 36px;
+}
+h4{
+    font-size: 32px;
+}
+h5{
+    font-size: 22px;
+}
+h6{
+    font-size: 18px;
+}
+p{
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+}
+ul{
+   list-style: none;
+   padding-left: 0;
+}
+

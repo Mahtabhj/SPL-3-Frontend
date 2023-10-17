@@ -1,0 +1,113 @@
+.dashboard{
+  .dashboard-content {
+    background: #f8f8f9;
+    //table Design
+    .table {
+      background: $color-white;
+      margin-bottom: 0px;
+      border-radius: 6px;
+      thead {
+        vertical-align:top;
+        border-bottom: 1px solid #DFDFDF;
+
+      }
+
+      .table-aws-icon {
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 5px;
+        padding: 3px;
+        margin-right: 10px;
+      }
+    }
+    
+    .table > :not(caption) > * > * {
+      padding: 1.5rem 1rem;
+    }
+    .table-bordered > :not(caption) > * > * {
+      border-width: 0 0px;
+    }
+    .wafr-table{
+      border: 1px solid #DFDFDF;
+      margin-bottom: 40px;
+      border-radius: 6px;
+      .table-striped > tbody > tr:nth-of-type(odd) > * {
+        --bs-table-accent-bg:#F8F8F9 ;
+    }
+    }
+  }
+  .aws-dropdown{
+    width: 300px;
+    .form-select{
+      background-color: $color-white;
+      option{
+        background-color: $color-white;
+        &:hover{
+          background-color: red;
+        }
+      }
+
+
+    }
+    .form-select:focus {
+      border-color: transparent;
+      outline: 0;
+      box-shadow:none;
+  }
+  }
+
+}
+.aws-dropdown-option{
+  background-color: $color-primary;
+}
+.aws-dropdown .dropdown-menu > .aws-dropdown-option:hover {
+  background-color: red;
+}
+
+ tbody, tfoot, tr, td, th {
+
+  border-width: 0;
+  border-top: 0;
+  border-bottom: 0;
+}
+.breadcrumb{
+  margin-bottom: 0px;
+  a{
+    text-decoration: none;
+    color: $color-primary;
+    font-weight: 500;
+  }
+}
+//custom styles to delete later
+.nav-tabs {
+  color: $color-primary;
+}
+.nav-link{
+  color: $color-primary;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+  border-bottom: 4px solid $color-primary;
+  color: $color-primary;
+  background-color: $color-white;
+}
+
+.assesment-popup-icon{
+  height: 156px;
+  width: 156px;
+  padding: 50px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  background-color: #22C38F0D;
+}
+.progress-bar{
+  background-color: $color-primary;
+}
+hr {
+  color: #ECECEC;
+  
+}
+

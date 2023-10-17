@@ -1,0 +1,52 @@
+.card-header{
+  border-bottom: 1px solid #ECECEC;
+}
+.card-footer{
+  border-top: 1px solid #ECECEC;
+}
+.nav-tabs{
+  border-bottom: 1px solid #ECECEC;
+}
+
+.wafr-content {
+  height: auto;
+  background: #f8f8f9;
+  height: 100%;
+  min-height: 100vh;
+  .nav-tabs {
+    color: $color-primary;
+  }
+  .nav-link{
+    color: $color-primary;
+    font-weight: 600;
+  }
+
+  .nav-tabs .nav-link.active,
+  .nav-tabs .nav-item.show .nav-link {
+    border-bottom: 4px solid $color-primary;
+    color: $color-primary;
+    background-color: $color-white;
+  }
+  .card-top-button {
+    padding: 10px;
+    margin-right: 20px;
+    .card-icon {
+      color: $gray-600;
+    }
+  }
+  .card-button {
+    background-color: $teal-200;
+    border-radius: 30px;
+    padding: 9px 22px;
+  }
+  .create-new {
+    position: relative;  
+    .create-new-button {
+      position: absolute;
+      background-color: $color-primary;
+      border: none;
+      padding-top: 9px;
+      padding-bottom: 9px;
+    }
+  }
+}

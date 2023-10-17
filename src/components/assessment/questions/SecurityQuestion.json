@@ -1,0 +1,442 @@
+[
+    {
+        "QuestionId": "securely-operate",
+        "PillarId": "security",
+        "QuestionTitle": "How do you securely operate your workload?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_securely_operate_multi_accounts",
+                "Title": "Separate workloads using accounts",
+                "Description": "Organize workloads in separate accounts and group accounts based on function or a common set of controls rather than mirroring your company\u2019s reporting structure. Start with security and infrastructure in mind to enable your organization to set common guardrails as your workloads grow."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_aws_account",
+                "Title": "Secure AWS account",
+                "Description": "Secure access to your accounts, for example by enabling MFA and restrict use of the root user, and configure account contacts."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_control_objectives",
+                "Title": "Identify and validate control objectives",
+                "Description": "Based on your compliance requirements and risks identified from your threat model, derive and validate the control objectives and controls that you need to apply to your workload. Ongoing validation of control objectives and controls help you measure the effectiveness of risk mitigation."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_updated_threats",
+                "Title": "Keep up to date with security threats",
+                "Description": "Recognize attack vectors by staying up to date with the latest security threats to help you define and implement appropriate controls."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_updated_recommendations",
+                "Title": "Keep up to date with security recommendations",
+                "Description": "Stay up to date with both AWS and industry security recommendations to evolve the security posture of your workload. "
+            },
+            {
+                "ChoiceId": "sec_securely_operate_test_validate_pipeline",
+                "Title": "Automate testing and validation of security controls in pipelines",
+                "Description": "Establish secure baselines and templates for security mechanisms that are tested and validated as part of your build, pipelines, and processes. Use tools and automation to test and validate all security controls continuously. For example, scan items such as machine images and infrastructure as code templates for security vulnerabilities, irregularities, and drift from an established baseline at each stage."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_threat_model",
+                "Title": "Identify and prioritize risks using a threat model",
+                "Description": "Use a threat model to identify and maintain an up-to-date register of potential threats. Prioritize your threats and adapt your security controls to prevent, detect, and respond. Revisit and maintain this in the context of the evolving security landscape."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_implement_services_features",
+                "Title": "Evaluate and implement new security services and features regularly",
+                "Description": "AWS and APN Partners constantly release new features and services that allow you to evolve the security posture of your workload."
+            },
+            {
+                "ChoiceId": "sec_securely_operate_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "identities",
+        "PillarId": "security",
+        "QuestionTitle": "How do you manage identities for people and machines?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_identities_enforce_mechanisms",
+                "Title": "Use strong sign-in mechanisms",
+                "Description": "Enforce minimum password length, and educate users to avoid common or re-used passwords. Enforce multi-factor authentication (MFA) with software or hardware mechanisms to provide an additional layer."
+            },
+            {
+                "ChoiceId": "sec_identities_unique",
+                "Title": "Use temporary credentials",
+                "Description": "Require identities to dynamically acquire temporary credentials. For workforce identities, use AWS Single Sign-On, or federation with IAM roles to access AWS accounts. For machine identities, require the use of IAM roles instead of long term access keys."
+            },
+            {
+                "ChoiceId": "sec_identities_secrets",
+                "Title": "Store and use secrets securely",
+                "Description": "For workforce and machine identities that require secrets such as passwords to third party applications, store them with automatic rotation using the latest industry standards in a specialized service."
+            },
+            {
+                "ChoiceId": "sec_identities_identity_provider",
+                "Title": "Rely on a centralized identity provider",
+                "Description": "For workforce identities, rely on an identity provider that enables you to manage identities in a centralized place. This enables you to create, manage, and revoke access from a single location making it easier to manage access. This reduces the requirement for multiple credentials and provides an opportunity to integrate with HR processes."
+            },
+            {
+                "ChoiceId": "sec_identities_audit",
+                "Title": "Audit and rotate credentials periodically",
+                "Description": "When you cannot rely on temporary credentials and require long term credentials, audit credentials to ensure that the defined controls (for example, MFA) are enforced, rotated regularly, and have appropriate access level."
+            },
+            {
+                "ChoiceId": "sec_identities_groups_attributes",
+                "Title": "Leverage user groups and attributes",
+                "Description": "Place users with common security requirements in groups defined by your identity provider, and put mechanisms in place to ensure that user attributes that may be used for access control (e.g., department or location) are correct and updated. Use these groups and attributes, rather than individual users, to control access. This allows you to manage access centrally by changing a user\u2019s group membership or attributes once, rather than updating many individual policies when a user\u2019s access needs change."
+            },
+            {
+                "ChoiceId": "sec_identities_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "permissions",
+        "PillarId": "security",
+        "QuestionTitle": "How do you manage permissions for people and machines?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_permissions_define",
+                "Title": "Define access requirements",
+                "Description": "Each component or resource of your workload needs to be accessed by administrators, end users, or other components. Have a clear definition of who or what should have access to each component, choose the appropriate identity type and method of authentication and authorization."
+            },
+            {
+                "ChoiceId": "sec_permissions_least_privileges",
+                "Title": "Grant least privilege access",
+                "Description": "Grant only the access that identities require by allowing access to specific actions on specific AWS resources under specific conditions. Rely on groups and identity attributes to dynamically set permissions at scale, rather than defining permissions for individual users. For example, you can allow a group of developers access to manage only resources for their project. This way, when a developer is removed from the group, access for the developer is revoked everywhere that group was used for access control, without requiring any changes to the access policies."
+            },
+            {
+                "ChoiceId": "sec_permissions_emergency_process",
+                "Title": "Establish emergency access process",
+                "Description": "A process that allows emergency access to your workload in the unlikely event of an automated process or pipeline issue. This will help you rely on least privilege access, but ensure users can obtain the right level of access when they require it. For example, establish a process for administrators to verify and approve their request."
+            },
+            {
+                "ChoiceId": "sec_permissions_continuous_reduction",
+                "Title": "Reduce permissions continuously",
+                "Description": "As teams and workloads determine what access they need, remove permissions they no longer use and establish review processes to achieve least privilege permissions. Continuously monitor and reduce unused identities and permissions."
+            },
+            {
+                "ChoiceId": "sec_permissions_define_guardrails",
+                "Title": "Define permission guardrails for your organization",
+                "Description": "Establish common controls that restrict access to all identities in your organization. For example, you can restrict access to specific AWS Regions, or prevent your operators from deleting common resources, such as an IAM role used for your central security team."
+            },
+            {
+                "ChoiceId": "sec_permissions_lifecycle",
+                "Title": "Manage access based on life cycle",
+                "Description": "Integrate access controls with operator and application life cycle and your centralized federation provider. For example, remove a user\u2019s access when they leave the organization or change roles."
+            },
+            {
+                "ChoiceId": "sec_permissions_analyze_cross_account",
+                "Title": "Analyze public and cross account access",
+                "Description": "Continuously monitor findings that highlight public and cross account access. Reduce public access and cross account access to only resources that require this type of access."
+            },
+            {
+                "ChoiceId": "sec_permissions_share_securely",
+                "Title": "Share resources securely",
+                "Description": "Govern the consumption of shared resources across accounts or within your AWS Organization. Monitor shared resources and review shared resource access."
+            },
+            {
+                "ChoiceId": "sec_permissions_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "detect-investigate-events",
+        "PillarId": "security",
+        "QuestionTitle": "How do you detect and investigate security events?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_detect_investigate_events_app_service_logging",
+                "Title": "Configure service and application logging",
+                "Description": "Configure logging throughout the workload, including application logs, resource logs, and AWS service logs. For example, ensure that AWS CloudTrail, Amazon CloudWatch Logs, Amazon GuardDuty and AWS Security Hub are enabled for all accounts within your organization."
+            },
+            {
+                "ChoiceId": "sec_detect_investigate_events_analyze_all",
+                "Title": "Analyze logs, findings, and metrics centrally",
+                "Description": "All logs, metrics, and telemetry should be collected centrally, and automatically analyzed to detect anomalies and indicators of unauthorized activity. A dashboard can provide you easy to access insight into real-time health. For example, ensure that Amazon GuardDuty and Security Hub logs are sent to a central location for alerting and analysis."
+            },
+            {
+                "ChoiceId": "sec_detect_investigate_events_auto_response",
+                "Title": "Automate response to events",
+                "Description": "Using automation to investigate and remediate events reduces human effort and error, and enables you to scale investigation capabilities. Regular reviews will help you tune automation tools, and continuously iterate. For example, automate responses to Amazon GuardDuty events by automating the first investigation step, then iterate to gradually remove human effort."
+            },
+            {
+                "ChoiceId": "sec_detect_investigate_events_actionable_events",
+                "Title": "Implement actionable security events",
+                "Description": "Create alerts that are sent to and can be actioned by your team. Ensure that alerts include relevant information for the team to take action. For example, ensure that Amazon GuardDuty and AWS Security Hub alerts are sent to the team to action, or sent to response automation tooling with the team remaining informed by messaging from the automation framework."
+            },
+            {
+                "ChoiceId": "sec_detect_investigate_events_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "network-protection",
+        "PillarId": "security",
+        "QuestionTitle": "How do you protect your network resources?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_network_protection_create_layers",
+                "Title": "Create network layers",
+                "Description": "Group components that share reachability requirements into layers. For example, a database cluster in a VPC with no need for internet access should be placed in subnets with no route to or from the internet. In a serverless workload operating without a VPC, similar layering and segmentation with microservices can achieve the same goal."
+            },
+            {
+                "ChoiceId": "sec_network_protection_layered",
+                "Title": "Control traffic at all layers",
+                "Description": "Apply controls with a defense in depth approach for both inbound and outbound traffic. For example, for Amazon Virtual Private Cloud (VPC) this includes security groups, Network ACLs, and subnets. For AWS Lambda, consider running in your private VPC with VPC-based controls."
+            },
+            {
+                "ChoiceId": "sec_network_protection_auto_protect",
+                "Title": "Automate network protection",
+                "Description": "Automate protection mechanisms to provide a self-defending network based on threat intelligence and anomaly detection. For example, intrusion detection and prevention tools that can pro-actively adapt to current threats and reduce their impact."
+            },
+            {
+                "ChoiceId": "sec_network_protection_inspection",
+                "Title": "Implement inspection and protection",
+                "Description": "Inspect and filter your traffic at each layer. For example, use a web application firewall to help protect against inadvertent access at the application network layer. For Lambda functions, third-party tools can add application-layer firewalling to your runtime environment."
+            },
+            {
+                "ChoiceId": "sec_network_protection_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "protect-compute",
+        "PillarId": "security",
+        "QuestionTitle": "How do you protect your compute resources?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_protect_compute_vulnerability_management",
+                "Title": "Perform vulnerability management",
+                "Description": "Frequently scan and patch for vulnerabilities in your code, dependencies, and in your infrastructure to help protect against new threats."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_reduce_surface",
+                "Title": "Reduce attack surface",
+                "Description": "Reduce your attack surface by hardening operating systems, minimizing components, libraries, and externally consumable services in use."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_implement_managed_services",
+                "Title": "Implement managed services",
+                "Description": "Implement services that manage resources, such as Amazon RDS, AWS Lambda, and Amazon ECS, to reduce your security maintenance tasks as part of the shared responsibility model."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_auto_protection",
+                "Title": "Automate compute protection",
+                "Description": "Automate your protective compute mechanisms including vulnerability management, reduction in attack surface, and management of resources."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_actions_distance",
+                "Title": "Enable people to perform actions at a distance",
+                "Description": "Removing the ability for interactive access reduces the risk of human error, and the potential for manual configuration or management. For example, use a change management workflow to deploy EC2 instances using infrastructure as code, then manage EC2 instances using tools instead of allowing direct access or a bastion host."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_validate_software_integrity",
+                "Title": "Validate software integrity",
+                "Description": "Implement mechanisms (for example, code signing) to validate that the software, code, and libraries used in the workload are from trusted sources and have not been tampered with."
+            },
+            {
+                "ChoiceId": "sec_protect_compute_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "data-classification",
+        "PillarId": "security",
+        "QuestionTitle": "How do you classify your data?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_data_classification_identify_data",
+                "Title": "Identify the data within your workload",
+                "Description": "This includes the type and classification of data, the associated business processes. data owner, applicable legal and compliance requirements, where it\u2019s stored, and the resulting controls that are needed to be enforced. This may include classifications to indicate if the data is intended to be publicly available, if the data is internal use only such as customer personally identifiable information (PII), or if the data is for more restricted access such as intellectual property, legally privileged or marked sensititve, and more."
+            },
+            {
+                "ChoiceId": "sec_data_classification_define_protection",
+                "Title": "Define data protection controls",
+                "Description": "Protect data according to its classification level. For example, secure data classified as public by using relevant recommendations while protecting sensitive data with additional controls."
+            },
+            {
+                "ChoiceId": "sec_data_classification_auto_classification",
+                "Title": "Automate identification and classification",
+                "Description": "Automate identification and classification of data to reduce the risk of human error from manual interactions."
+            },
+            {
+                "ChoiceId": "sec_data_classification_lifecycle_management",
+                "Title": "Define data lifecycle management",
+                "Description": "Your defined lifecycle strategy should be based on sensitivity level, as well as legal and organization requirements. Aspects including the duration you retain data for, data destruction, data access management, data transformation, and data sharing should be considered."
+            },
+            {
+                "ChoiceId": "sec_data_classification_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "protect-data-rest",
+        "PillarId": "security",
+        "QuestionTitle": "How do you protect your data at rest?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_protect_data_rest_key_mgmt",
+                "Title": "Implement secure key management",
+                "Description": "Encryption keys must be stored securely, with\n               strict access control, for example, by using a key management service such as AWS\n               KMS. Consider using different keys, and access control to the keys, combined with the\n               AWS IAM and resource policies, to align with data classification levels and\n               segregation requirements."
+            },
+            {
+                "ChoiceId": "sec_protect_data_rest_encrypt",
+                "Title": "Enforce encryption at rest",
+                "Description": "Enforce your encryption requirements based on the\n               latest standards and recommendations to help protect your data at rest."
+            },
+            {
+                "ChoiceId": "sec_protect_data_rest_automate_protection",
+                "Title": "Automate data at rest protection",
+                "Description": "Use automated tools to validate and enforce data at\n               rest protection continuously, for example, verify that there are only encrypted\n               storage resources."
+            },
+            {
+                "ChoiceId": "sec_protect_data_rest_access_control",
+                "Title": "Enforce access control",
+                "Description": "Enforce access control with least privileges and\n               mechanisms, including backups, isolation, and versioning, to help protect your data\n               at rest. Prevent operators from granting public access to your data."
+            },
+            {
+                "ChoiceId": "sec_protect_data_rest_use_people_away",
+                "Title": "Use mechanisms to keep people away from data",
+                "Description": "Keep all users away from directly accessing\n               sensitive data and systems under normal operational circumstances. For example,\n               provide a dashboard instead of direct access to a data store to run queries. Where\n               CI/CD pipelines are not used, determine which controls and processes are required to\n               adequately provide a normally disabled break-glass access mechanism."
+            },
+            {
+                "ChoiceId": "sec_protect_data_rest_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "protect-data-transit",
+        "PillarId": "security",
+        "QuestionTitle": "How do you protect your data in transit?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_protect_data_transit_key_cert_mgmt",
+                "Title": "Implement secure key and certificate\n               management",
+                "Description": "Store encryption keys and certificates securely and\n               rotate them at appropriate time intervals while applying strict access control; for\n               example, by using a certificate management service, such as AWS Certificate Manager\n               (ACM)."
+            },
+            {
+                "ChoiceId": "sec_protect_data_transit_encrypt",
+                "Title": "Enforce encryption in transit",
+                "Description": "Enforce your defined encryption requirements based\n               on appropriate standards and recommendations to help you meet your organizational,\n               legal, and compliance requirements."
+            },
+            {
+                "ChoiceId": "sec_protect_data_transit_auto_unintended_access",
+                "Title": "Automate detection of unintended data\n               access",
+                "Description": "Use tools such as GuardDuty to automatically detect\n               attempts to move data outside of defined boundaries based on data classification\n               level, for example, to detect a trojan that is copying data to an unknown or\n               untrusted network using the DNS protocol."
+            },
+            {
+                "ChoiceId": "sec_protect_data_transit_authentication",
+                "Title": "Authenticate network communications",
+                "Description": "Verify the identity of communications by using\n               protocols that support authentication, such as Transport Layer Security (TLS) or\n               IPsec."
+            },
+            {
+                "ChoiceId": "sec_protect_data_transit_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "incident-response",
+        "PillarId": "security",
+        "QuestionTitle": "How do you anticipate, respond to, and recover from incidents?",
+        "Choices": [
+            {
+                "ChoiceId": "sec_incident_response_identify_personnel",
+                "Title": "Identify key personnel and external resources",
+                "Description": "Identify internal and external personnel, resources, and legal obligations that would help your organization respond to an incident."
+            },
+            {
+                "ChoiceId": "sec_incident_response_develop_management_plans",
+                "Title": "Develop incident management plans",
+                "Description": "Create plans to help you respond to, communicate during, and recover from an incident. For example, you can start an incident response plan with the most likely scenarios for your workload and organization. Include how you would communicate and escalate both internally and externally."
+            },
+            {
+                "ChoiceId": "sec_incident_response_prepare_forensic",
+                "Title": "Prepare forensic capabilities",
+                "Description": "Identify and prepare forensic investigation capabilities that are suitable, including external specialists, tools, and automation."
+            },
+            {
+                "ChoiceId": "sec_incident_response_auto_contain",
+                "Title": "Automate containment capability",
+                "Description": "Automate containment and recovery of an incident to reduce response times and organizational impact."
+            },
+            {
+                "ChoiceId": "sec_incident_response_pre_provision_access",
+                "Title": "Pre-provision access",
+                "Description": "Ensure that incident responders have the correct access pre-provisioned into AWS to reduce the time for investigation through to recovery."
+            },
+            {
+                "ChoiceId": "sec_incident_response_pre_deploy_tools",
+                "Title": "Pre-deploy tools",
+                "Description": "Ensure that security personnel have the right tools pre-deployed into AWS to reduce the time for investigation through to recovery."
+            },
+            {
+                "ChoiceId": "sec_incident_response_run_game_days",
+                "Title": "Run game days",
+                "Description": "Practice incident response game days (simulations) regularly, incorporate lessons learned into your incident management plans, and continuously improve."
+            },
+            {
+                "ChoiceId": "sec_incident_response_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    }
+]

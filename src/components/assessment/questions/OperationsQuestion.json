@@ -1,0 +1,588 @@
+[
+    {
+        "QuestionId": "priorities",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you determine what your priorities are?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_priorities_ext_cust_needs",
+                "Title": "Evaluate external customer needs",
+                "Description": "\n               Involve key stakeholders, including business, development, and operations teams, to determine where to focus efforts on external customer needs.\n               This will ensure that you have a thorough understanding of the operations support that is required to achieve your desired business outcomes.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_int_cust_needs",
+                "Title": "Evaluate internal customer needs",
+                "Description": "\n               Involve key stakeholders, including business, development, and operations teams, when determining where to focus efforts on internal customer needs.\n               This will ensure that you have a thorough understanding of the operations support that is required to achieve business outcomes.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_governance_reqs",
+                "Title": "Evaluate governance requirements",
+                "Description": "\n               Ensure that you are aware of guidelines or obligations defined by your organization that may mandate or emphasize specific focus. Evaluate internal factors, such as organization policy, standards, and requirements. Validate that you have mechanisms to identify changes to governance. If no governance requirements are identified, ensure that you have applied due diligence to this determination.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_compliance_reqs",
+                "Title": "Evaluate compliance requirements",
+                "Description": "\n               Evaluate external factors, such as regulatory compliance requirements and industry standards, \n               to ensure that you are aware of guidelines or obligations that may mandate or emphasize specific focus.\n               If no compliance requirements are identified, ensure that you apply due diligence to this determination.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_eval_threat_landscape",
+                "Title": "Evaluate threat landscape",
+                "Description": "\n               Evaluate threats to the business (for example, competition, business risk and liabilities, operational risks, and information security threats) and maintain current information in a risk registry. Include the impact of risks when determining where to focus efforts.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_eval_tradeoffs",
+                "Title": "Evaluate tradeoffs",
+                "Description": "\n               Evaluate the impact of tradeoffs between competing interests or alternative approaches, to help make informed decisions when determining where to focus efforts or choosing a course of action. For example, accelerating speed to market for new features may be emphasized over cost optimization, or you may choose a relational database for non-relational data to simplify the effort to migrate a system, rather than migrating to a database optimized for your data type and updating your application.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_manage_risk_benefit",
+                "Title": "Manage benefits and risks",
+                "Description": "\n               Manage benefits and risks to make informed decisions when determining where to focus efforts. For example, it may be beneficial to deploy a workload with unresolved issues so that significant new features can be made available to customers. It may be possible to mitigate associated risks, or it may become unacceptable to allow a risk to remain, in which case you will take action to address the risk.\n            "
+            },
+            {
+                "ChoiceId": "ops_priorities_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "ops-model",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you structure your organization to support your business outcomes?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_ops_model_def_resource_owners",
+                "Title": "Resources have identified owners",
+                "Description": "\n               Understand who has ownership of each application, workload, platform, and infrastructure component, what business value is provided by that component, and why that ownership exists. Understanding the business value of these individual components and how they support business outcomes informs the processes and procedures applied against them.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_def_proc_owners",
+                "Title": "Processes and procedures have identified owners",
+                "Description": "\n               Understand who has ownership of the definition of individual processes and procedures, why those specific process and procedures are used, and why that ownership exists. Understanding the reasons that specific processes and procedures are used enables identification of improvement opportunities. \n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_def_activity_owners",
+                "Title": "Operations activities have identified owners responsible for their performance",
+                "Description": "\n               Understand who has responsibility to perform specific activities on defined workloads and why that responsibility exists. Understanding who has responsibility to perform activities informs who will conduct the activity, validate the result, and provide feedback to the owner of the activity.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_know_my_job",
+                "Title": "Team members know what they are responsible for",
+                "Description": "\n               Understanding the responsibilities of your role and how you contribute to business outcomes informs the prioritization of your tasks and why your role is important. This enables team members to recognize needs and respond appropriately.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_find_owner",
+                "Title": "Mechanisms exist to identify responsibility and ownership",
+                "Description": "\n               Where no individual or team is identified, there are defined escalation paths to someone with the authority to assign ownership or plan for that need to be addressed.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_req_add_chg_exception",
+                "Title": "Mechanisms exist to request additions, changes, and exceptions",
+                "Description": "\n               You are able to make requests to owners of processes, procedures, and resources. Make informed decisions to approve requests where viable and determined to be appropriate after an evaluation of benefits and risks.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_def_neg_team_agreements",
+                "Title": "Responsibilities between teams are predefined or negotiated",
+                "Description": "\n               There are defined or negotiated agreements between teams describing how they work with and support each other (for example, response times, service level objectives, or service level agreements). Understanding the impact of the teams\u2019 work on business outcomes, and the outcomes of other teams and organizations, informs the prioritization of their tasks and enables them to respond appropriately.\n            "
+            },
+            {
+                "ChoiceId": "ops_ops_model_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "org-culture",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How does your organizational culture support your business outcomes?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_org_culture_executive_sponsor",
+                "Title": "Executive Sponsorship",
+                "Description": "\n               Senior leadership clearly sets expectations for the organization and evaluates success. Senior leadership is the sponsor, advocate, and driver for the adoption of best practices and evolution of the organization\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_team_emp_take_action",
+                "Title": "Team members are empowered to take action when outcomes are at risk",
+                "Description": "\n               The workload owner has defined guidance and scope empowering team members to respond when outcomes are at risk. Escalation mechanisms are used to get direction when events are outside of the defined scope.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_team_enc_escalation",
+                "Title": "Escalation is encouraged",
+                "Description": "\n               Team members have mechanisms and are encouraged to escalate concerns to decision makers and stakeholders if they believe outcomes are at risk. Escalation should be performed early and often so that risks can be identified, and prevented from causing incidents.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_effective_comms",
+                "Title": "Communications are timely, clear, and actionable",
+                "Description": "\n               Mechanisms exist and are used to provide timely notice to team members of known risks and planned events. Necessary context, details, and time (when possible) are provided to support determining if action is necessary, what action is required, and to take action in a timely manner. For example, providing notice of software vulnerabilities so that patching can be expedited, or providing notice of planned sales promotions so that a change freeze can be implemented to avoid the risk of service disruption.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_team_enc_experiment",
+                "Title": "Experimentation is encouraged",
+                "Description": "\n               Experimentation accelerates learning and keeps team members interested and engaged. An undesired result is a successful experiment that has identified a path that will not lead to success. Team members are not punished for successful experiments with undesired results. Experimentation is required for innovation to happen and turn ideas into outcomes.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_team_enc_learn",
+                "Title": "Team members are enabled and encouraged to maintain and grow their skill sets",
+                "Description": "\n               Teams must grow their skill sets to adopt new technologies, and to support changes in demand and responsibilities in support of your workloads. Growth of skills in new technologies is frequently a source of team member satisfaction and supports innovation. Support your team members\u2019 pursuit and maintenance of industry certifications that validate and acknowledge their growing skills. Cross train to promote knowledge transfer and reduce the risk of significant impact when you lose skilled and experienced team members with institutional knowledge. Provide dedicated structured time for learning.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_team_res_appro",
+                "Title": "Resource teams appropriately",
+                "Description": "\n               Maintain team member capacity, and provide tools and resources, to support your workload needs. Overtasking team members increases the risk of incidents resulting from human error. Investments in tools and resources (for example, providing automation for frequently executed activities) can scale the effectiveness of your team, enabling them to support additional activities.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_diverse_inc_access",
+                "Title": "Diverse opinions are encouraged and sought within and across teams",
+                "Description": "\n               Leverage cross-organizational diversity to seek multiple unique perspectives. Use this perspective to increase innovation, challenge your assumptions, and reduce the risk of confirmation bias. Grow inclusion, diversity, and accessibility within your teams to gain beneficial perspectives.\n            "
+            },
+            {
+                "ChoiceId": "ops_org_culture_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "telemetry",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you design your workload so that you can understand its state?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_telemetry_application_telemetry",
+                "Title": "Implement application telemetry",
+                "Description": "\n               Instrument your application code to emit information about its internal state, status, and achievement of business outcomes. For example, queue depth, error messages, and response times. Use this information to determine when a response is required.\n            "
+            },
+            {
+                "ChoiceId": "ops_telemetry_workload_telemetry",
+                "Title": "Implement and configure workload telemetry",
+                "Description": "\n               Design and configure your workload to emit information about its internal state and current status. For example, API call volume, HTTP status codes, and scaling events. Use this information to help determine when a response is required.\n            "
+            },
+            {
+                "ChoiceId": "ops_telemetry_customer_telemetry",
+                "Title": "Implement user activity telemetry",
+                "Description": "\n               Instrument your application code to emit information about user activity, for example, click streams, or started, abandoned, and completed transactions. Use this information to help understand how the application is used, patterns of usage, and to determine when a response is required.\n            "
+            },
+            {
+                "ChoiceId": "ops_telemetry_dependency_telemetry",
+                "Title": "Implement dependency telemetry",
+                "Description": "\n               Design and configure your workload to emit information about the status (for example, reachability or response time) of resources it depends on. Examples of external dependencies can include, external databases, DNS, and network connectivity. Use this information to determine when a response is required.\n            "
+            },
+            {
+                "ChoiceId": "ops_telemetry_dist_trace",
+                "Title": "Implement transaction traceability",
+                "Description": "\n               Implement your application code and configure your workload components to emit information about the flow of transactions across the workload. Use this information to determine when a response is required and to assist you in identifying the factors contributing to an issue.\n            "
+            },
+            {
+                "ChoiceId": "ops_telemetry_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "dev-integ",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you reduce defects, ease remediation, and improve flow into production?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_dev_integ_version_control",
+                "Title": "Use version control",
+                "Description": "\n               Use version control to enable tracking of changes and releases.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_test_val_chg",
+                "Title": "Test and validate changes",
+                "Description": "\n               Test and validate changes to help limit and detect errors.\n               Automate testing to reduce errors caused by manual processes, and reduce the level of effort to test.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_conf_mgmt_sys",
+                "Title": "Use configuration management systems",
+                "Description": "\n               Use configuration management systems to make and track configuration changes. \n               These systems reduce errors caused by manual processes and reduce the level of effort to deploy changes. \n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_build_mgmt_sys",
+                "Title": "Use build and deployment management systems",
+                "Description": "\n               Use build and deployment management systems.\n               These systems reduce errors caused by manual processes and reduce the level of effort to deploy changes. \n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_patch_mgmt",
+                "Title": "Perform patch management",
+                "Description": "\n               Perform patch management to gain features, address issues, and remain compliant with governance. \n               Automate patch management to reduce errors caused by manual processes, and reduce the level of effort to patch.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_share_design_stds",
+                "Title": "Share design standards",
+                "Description": "\n               Share best practices across teams \n               to increase awareness \n               and maximize the benefits of development efforts.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_code_quality",
+                "Title": "Implement practices to improve code quality",
+                "Description": "\n               Implement practices \n               to improve code quality \n               and minimize defects. \n               For example, test-driven development, code reviews, and standards adoption.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_multi_env",
+                "Title": "Use multiple environments",
+                "Description": "\n               Use multiple environments to experiment, develop, and test your workload. Use increasing levels of controls as environments approach production to gain confidence your workload will operate as intended when deployed.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_freq_sm_rev_chg",
+                "Title": "Make frequent, small, reversible changes",
+                "Description": "\n               Frequent, small, and reversible changes reduce the scope and impact of a change.\n               This eases troubleshooting, enables faster remediation, and provides the option to roll back a change.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_auto_integ_deploy",
+                "Title": "Fully automate integration and deployment",
+                "Description": "\n               Automate build, deployment, and testing of the workload. \n               This reduces errors caused by manual processes and reduces the effort to deploy changes.\n            "
+            },
+            {
+                "ChoiceId": "ops_dev_integ_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "mit-deploy-risks",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you mitigate deployment risks?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_mit_deploy_risks_plan_for_unsucessful_changes",
+                "Title": "Plan for unsuccessful changes",
+                "Description": "\n               Plan to revert to a known good state, \n               or remediate in the production environment \n               if a change does not have the desired outcome.\n               This preparation reduces recovery time through faster responses.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_test_val_chg",
+                "Title": "Test and validate changes",
+                "Description": "\n               Test changes and validate the results at all lifecycle stages to confirm new features and minimize the risk and impact of failed deployments.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_deploy_mgmt_sys",
+                "Title": "Use deployment management systems",
+                "Description": "\n               Use deployment management systems \n               to track and implement change. \n               This reduces errors cause by manual processes and reduces the effort to deploy changes.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_test_limited_deploy",
+                "Title": "Test using limited deployments",
+                "Description": "\n               Test with limited deployments alongside existing systems \n               to confirm desired outcomes prior to full scale deployment.\n               For example, use deployment canary testing or one-box deployments.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_deploy_to_parallel_env",
+                "Title": "Deploy using parallel environments",
+                "Description": "\n               Implement changes onto parallel environments, and then transition over to the new environment. Maintain the prior environment until there is confirmation of successful deployment. Doing so minimizes recovery time by enabling rollback to the previous environment.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_freq_sm_rev_chg",
+                "Title": "Deploy frequent, small, reversible changes",
+                "Description": "\n               Use frequent, small, and reversible changes to reduce the scope of a change.\n               This results in easier troubleshooting and faster remediation with the option to roll back a change.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_auto_integ_deploy",
+                "Title": "Fully automate integration and deployment",
+                "Description": "\n               Automate build, deployment, and testing of the workload. \n               This reduces errors cause by manual processes and reduces the effort to deploy changes.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_auto_testing_and_rollback",
+                "Title": "Automate testing and rollback",
+                "Description": "\n               Automate testing of deployed environments to confirm desired outcomes.\n               Automate rollback to previous known good state when outcomes are not achieved to minimize recovery time and reduce errors caused by manual processes.\n            "
+            },
+            {
+                "ChoiceId": "ops_mit_deploy_risks_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "ready-to-support",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you know that you are ready to support a workload?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_ready_to_support_personnel_capability",
+                "Title": "Ensure personnel capability",
+                "Description": "\n               Have a mechanism to validate that you have the appropriate number of trained personnel to provide support for operational needs. Train personnel and adjust personnel capacity as necessary to maintain effective support.\n            "
+            },
+            {
+                "ChoiceId": "ops_ready_to_support_const_orr",
+                "Title": "Ensure consistent review of operational readiness",
+                "Description": "\n               Ensure you have a consistent review of your readiness to operate a workload. Reviews must include, at a minimum, the operational readiness of the teams and the workload, and security requirements. Implement review activities in code and trigger automated review in response to events where appropriate, to ensure consistency, speed of execution, and reduce errors caused by manual processes.\n            "
+            },
+            {
+                "ChoiceId": "ops_ready_to_support_use_runbooks",
+                "Title": "Use runbooks to perform procedures",
+                "Description": "\n               Runbooks are documented procedures to achieve specific outcomes. \n               Enable consistent and prompt responses to well-understood events by documenting procedures in runbooks. \n               Implement runbooks as code and trigger the execution of runbooks in response to events where appropriate,\n               to ensure consistency, speed responses, and reduce errors caused by manual processes.\n            "
+            },
+            {
+                "ChoiceId": "ops_ready_to_support_use_playbooks",
+                "Title": "Use playbooks to investigate issues",
+                "Description": "\n               Enable consistent and prompt responses to issues that are not well understood, by documenting the investigation process in playbooks. Playbooks are the predefined steps performed to identify the factors contributing to a failure scenario. The results from any process step are used to determine the next steps to take until the issue is identified or escalated.\n            "
+            },
+            {
+                "ChoiceId": "ops_ready_to_support_informed_deploy_decisions",
+                "Title": "Make informed decisions to deploy systems and changes",
+                "Description": "\n               Evaluate the capabilities of the team to support the workload and the workload's compliance with governance.\n               Evaluate these against the benefits of deployment when determining whether to transition a system or change into production.\n               Understand the benefits and risks to make informed decisions.\n            "
+            },
+            {
+                "ChoiceId": "ops_ready_to_support_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "workload-health",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you understand the health of your workload?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_workload_health_define_workload_kpis",
+                "Title": "Identify key performance indicators",
+                "Description": "\n               Identify key performance indicators (KPIs) based on desired business outcomes (for example, order rate, customer retention rate, and profit versus operating expense) and customer outcomes (for example, customer satisfaction). Evaluate KPIs to determine workload success.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_design_workload_metrics",
+                "Title": "Define workload metrics",
+                "Description": "\n               Define workload metrics to measure the achievement of KPIs (for example, abandoned shopping carts, orders placed, cost, price, and allocated workload expense). Define workload metrics to measure the health of the workload (for example, interface response time, error rate, requests made, requests completed, and utilization). Evaluate metrics to determine if the workload is achieving desired outcomes, and to understand the health of the workload.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_collect_analyze_workload_metrics",
+                "Title": "Collect and analyze workload metrics",
+                "Description": "\n               Perform regular proactive reviews of metrics\n               to identify trends and determine where appropriate responses are needed.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_workload_metric_baselines",
+                "Title": "Establish workload metrics baselines",
+                "Description": "\n               Establish baselines for metrics to provide expected values as the basis for comparison and identification of under and over performing components. Identify thresholds for improvement, investigation, and intervention.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_learn_workload_usage_patterns",
+                "Title": "Learn expected patterns of activity for workload",
+                "Description": "\n               Establish patterns of workload activity to identify anomalous behavior so that you can respond appropriately if required.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_workload_outcome_alerts",
+                "Title": "Alert when workload outcomes are at risk",
+                "Description": "\n               Raise an alert when workload outcomes are at risk so that you can respond appropriately if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_workload_anomaly_alerts",
+                "Title": "Alert when workload anomalies are detected",
+                "Description": "\n               Raise an alert when workload anomalies are detected so that you can respond appropriately if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_biz_level_view_workload",
+                "Title": "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            ",
+                "Description": "\n               Create a business-level view of your workload operations\n               to help you determine if you are satisfying needs and \n               to identify areas that need improvement to reach business goals.\n               Validate the effectiveness of KPIs and metrics \n               and revise them if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_workload_health_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "operations-health",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you understand the health of your operations?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_operations_health_define_ops_kpis",
+                "Title": "Identify key performance indicators",
+                "Description": "\n               Identify key performance indicators (KPIs) based on desired business (for example, new features delivered) and customer outcomes (for example, customer support cases). Evaluate KPIs to determine operations success.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_design_ops_metrics",
+                "Title": "Define operations metrics",
+                "Description": "\n               Define operations metrics to measure the achievement of KPIs (for example, successful deployments, and failed deployments). Define operations metrics to measure the health of operations activities (for example, mean time to detect an incident (MTTD), and mean time to recovery (MTTR) from an incident). Evaluate metrics to determine if operations are achieving desired outcomes, and to understand the health of your operations activities.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_collect_analyze_ops_metrics",
+                "Title": "Collect and analyze operations metrics",
+                "Description": "\n               Perform regular, proactive reviews of metrics to identify trends and determine where appropriate responses are needed.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_ops_metric_baselines",
+                "Title": "Establish operations metrics baselines",
+                "Description": "\n               Establish baselines for metrics to provide expected values as the basis for comparison and identification of under and over performing operations activities.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_learn_ops_usage_patterns",
+                "Title": "Learn the expected patterns of activity for operations",
+                "Description": "\n               Establish patterns of operations activities to identify anomalous activity so that you can respond appropriately if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_ops_outcome_alerts",
+                "Title": "Alert when operations outcomes are at risk",
+                "Description": "\n               Raise an alert when operations outcomes are at risk so that you can respond appropriately if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_ops_anomaly_alerts",
+                "Title": "Alert when operations anomalies are detected",
+                "Description": "\n               Raise an alert when operations anomalies are detected so that you can respond appropriately if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_biz_level_view_ops",
+                "Title": "\n               Validate the achievement of outcomes and the effectiveness of KPIs and metrics\n            ",
+                "Description": "\n               Create a business-level view of your operations activities\n               to help you determine if you are satisfying needs and \n               to identify areas that need improvement to reach business goals.\n               Validate the effectiveness of KPIs and metrics \n               and revise them if necessary.\n            "
+            },
+            {
+                "ChoiceId": "ops_operations_health_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "event-response",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you manage workload and operations events?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_event_response_event_incident_problem_process",
+                "Title": "Use processes for event, incident, and problem management",
+                "Description": "\n               Have processes to address observed events, events that require intervention (incidents), \n               and events that require intervention and either recur or cannot currently be resolved (problems). \n               Use these processes to mitigate the impact of these events on the business and your customers \n               by ensuring timely and appropriate responses.\n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_process_per_alert",
+                "Title": "Have a process per alert",
+                "Description": "\n               Have a well-defined response (runbook or playbook), \n               with a specifically identified owner, \n               for any event for which you raise an alert.\n               This ensures effective and prompt responses to operations events \n               and prevents actionable events from being obscured by less valuable notifications.\n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_prioritize_events",
+                "Title": "Prioritize operational events based on business impact",
+                "Description": "\n               Ensure that when multiple events require intervention, \n               those that are most significant to the business are addressed first.\n               For example, impacts can include loss of life or injury, financial loss, or damage to reputation or trust.\n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_define_escalation_paths",
+                "Title": "Define escalation paths",
+                "Description": "\n               Define escalation paths in your runbooks and playbooks, \n               including what triggers escalation, and\n               procedures for escalation. \n               Specifically identify owners for each action \n               to ensure effective and prompt responses to operations events.\n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_push_notify",
+                "Title": "Enable push notifications",
+                "Description": "\n               Communicate directly with your users (for example, with email or SMS) when the services they use are impacted, and again when the services return to normal operating conditions, to enable users to take appropriate action.\n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_dashboards",
+                "Title": "Communicate status through dashboards",
+                "Description": "\n               Provide dashboards tailored to their target audiences (for example, internal technical teams, leadership, and customers)\n               to communicate the current operating status of the business and provide metrics of interest. \n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_auto_event_response",
+                "Title": "Automate responses to events",
+                "Description": "\n               Automate responses to events to reduce errors caused by manual processes, and to ensure prompt and consistent responses. \n            "
+            },
+            {
+                "ChoiceId": "ops_event_response_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "evolve-ops",
+        "PillarId": "operationalExcellence",
+        "QuestionTitle": "How do you evolve operations?",
+        "Choices": [
+            {
+                "ChoiceId": "ops_evolve_ops_process_cont_imp",
+                "Title": "Have a process for continuous improvement",
+                "Description": "\n               Regularly evaluate and prioritize opportunities for improvement\n               to focus efforts where they can provide the greatest benefits.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_perform_rca_process",
+                "Title": "Perform post-incident analysis",
+                "Description": "\n               Review customer-impacting events, and identify the contributing factors\n               and preventative actions. Use this information to develop mitigations to limit or prevent recurrence. Develop procedures for prompt and effective responses. Communicate contributing factors and corrective actions as appropriate, tailored to target audiences.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_feedback_loops",
+                "Title": "Implement feedback loops",
+                "Description": "\n               Include feedback loops in your procedures and workloads\n               to help you identify issues and areas that need improvement.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_knowledge_management",
+                "Title": "Perform Knowledge Management",
+                "Description": "\n               Mechanisms exist for your team members to discover the information that they are looking for in a timely manner, access it, and identify that it\u2019s current and complete. Mechanisms are present to identify needed content, content in need of refresh, and content that should be archived so that it\u2019s no longer referenced.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_drivers_for_imp",
+                "Title": "Define drivers for improvement",
+                "Description": "\n               Identify drivers for improvement \n               to help you evaluate and prioritize opportunities.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_validate_insights",
+                "Title": "Validate insights",
+                "Description": "\n               Review your analysis results and responses with cross-functional teams and business owners. \n               Use these reviews to establish common understanding, identify additional impacts, and determine courses of action. \n               Adjust responses as appropriate.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_metrics_review",
+                "Title": "Perform operations metrics reviews",
+                "Description": "\n               Regularly perform retrospective analysis of operations metrics with cross-team participants from different areas of the business. \n               Use these reviews to identify opportunities for improvement, potential courses of action, and to share lessons learned.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_share_lessons_learned",
+                "Title": "Document and share lessons learned",
+                "Description": "\n               Document and share lessons learned from the execution of operations activities \n               so that you can use them internally and across teams.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_allocate_time_for_imp",
+                "Title": "Allocate time to make improvements",
+                "Description": "\n               Dedicate time and resources within your processes \n               to make continuous incremental improvements possible.\n            "
+            },
+            {
+                "ChoiceId": "ops_evolve_ops_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    }
+]

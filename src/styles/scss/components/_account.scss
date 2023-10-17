@@ -1,0 +1,65 @@
+.nav-pills .nav-link {
+  all: unset;
+}
+.account {
+  background-color: #f8f8f9;
+  .title {
+    color: #0f1a43;
+    font-weight: 700;
+    font-size: 24px;
+    // line-height: 22px;
+  }
+  .add-new-account{
+    background-color: $color-primary;
+    border: none;
+  }
+  .nav-item,
+  .tab-content {
+    padding: 15px;
+  }
+  .nav-pills .nav-link {
+    background-color: transparent;
+    color: #808080;
+    font-size: 1rem;
+    line-height: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+    &.active {
+      color: #0f1a43;
+      font-weight: 600;
+    }
+  }
+}
+.accounts-tabs {
+  .nav-tabs {
+    border-bottom: transparent;
+    .nav-link {
+      font-weight: 500;
+      font-size: 0.875rem;
+      color: #0f1a43;
+      line-height: 22px;
+      background-color: transparent;
+      border: none;
+
+      &.active {
+        border-bottom: 3px solid #0f1a43;
+      }
+    }
+  }
+}
+.error-msg p {
+    border: 1px solid rgba(249, 91, 91, 0.2);
+    border-radius: 6px;
+    background: rgba(249, 91, 91, 0.05);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  small{
+    color: #808080;
+  }
+

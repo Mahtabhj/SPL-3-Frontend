@@ -1,0 +1,540 @@
+[
+    {
+        "QuestionId": "manage-service-limits",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you manage service quotas and constraints?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_manage_service_limits_aware_quotas_and_constraints",
+                "Title": "Aware of service quotas and constraints",
+                "Description": "You are aware of your default quotas and quota increase requests for your workload architecture. You additionally know which resource constraints, such as disk or network, are potentially impactful."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_limits_considered",
+                "Title": "Manage service quotas across accounts and regions",
+                "Description": "If you are using multiple AWS accounts or AWS Regions, ensure that you request the appropriate quotas in all environments in which your production workloads run."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_aware_fixed_limits",
+                "Title": "Accommodate fixed service quotas and constraints through architecture",
+                "Description": "Be aware of unchangeable service quotas and physical resources, and architect to prevent these from impacting reliability."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_monitor_manage_limits",
+                "Title": "Monitor and manage quotas",
+                "Description": "Evaluate your potential usage and increase your quotas appropriately allowing for planned growth in usage."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_automated_monitor_limits",
+                "Title": "Automate quota management",
+                "Description": "Implement tools to alert you when thresholds are being approached. By using AWS Service Quotas APIs, you can automate quota increase requests."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_suff_buffer_limits",
+                "Title": "Ensure that a sufficient gap exists between the current quotas and the maximum usage to accommodate failover",
+                "Description": "When a resource fails, it may still be counted against quotas until its successfully terminated. Ensure that your quotas cover the overlap of all failed resources with replacements before the failed resources are terminated. You should consider an Availability Zone failure when calculating this gap."
+            },
+            {
+                "ChoiceId": "rel_manage_service_limits_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "planning-network-topology",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you plan your network topology?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_planning_network_topology_ha_conn_users",
+                "Title": "Use highly available network connectivity for your workload public endpoints",
+                "Description": "These endpoints and the routing to them must be highly available. To achieve this, use highly available DNS, content delivery networks (CDNs), API Gateway, load balancing, or reverse proxies."
+            },
+            {
+                "ChoiceId": "rel_planning_network_topology_ha_conn_private_networks",
+                "Title": "Provision redundant connectivity between private networks in the cloud and on-premises environments",
+                "Description": "Use multiple AWS Direct Connect (DX) connections or VPN tunnels between separately deployed private networks. Use multiple DX locations for high availability. If using multiple AWS Regions, ensure redundancy in at least two of them. You might want to evaluate AWS Marketplace appliances that terminate VPNs. If you use AWS Marketplace appliances, deploy redundant instances for high availability in different Availability Zones."
+            },
+            {
+                "ChoiceId": "rel_planning_network_topology_ip_subnet_allocation",
+                "Title": "Ensure IP subnet allocation accounts for expansion and availability",
+                "Description": "Amazon VPC IP address ranges must be large enough to accommodate workload requirements, including factoring in future expansion and allocation of IP addresses to subnets across Availability Zones. This includes load balancers, EC2 instances, and container-based applications."
+            },
+            {
+                "ChoiceId": "rel_planning_network_topology_prefer_hub_and_spoke",
+                "Title": "Prefer hub-and-spoke topologies over many-to-many mesh",
+                "Description": "If more than two network address spaces (for example, VPCs and on-premises networks) are connected via VPC peering, AWS Direct Connect, or VPN, then use a hub-and-spoke model, like that provided by AWS Transit Gateway."
+            },
+            {
+                "ChoiceId": "rel_planning_network_topology_non_overlap_ip",
+                "Title": "Enforce non-overlapping private IP address ranges in all private address spaces where they are connected",
+                "Description": "The IP address ranges of each of your VPCs must not overlap when peered or connected via VPN. You must similarly avoid IP address conflicts between a VPC and on-premises environments or with other cloud providers that you use. You must also have a way to allocate private IP address ranges when needed."
+            },
+            {
+                "ChoiceId": "rel_planning_network_topology_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "service-architecture",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you design your workload service architecture?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_service_architecture_monolith_soa_microservice",
+                "Title": "Choose how to segment your workload",
+                "Description": "\n               Monolithic architecture should be avoided. Instead, you should choose between SOA and microservices. When making each choice, balance the benefits against the complexities\u2014what is right for a new product racing to first launch is different than what a workload built to scale from the start needs. The benefits of using smaller segments include greater agility, organizational flexibility, and scalability. Complexities include possible increased latency, more complex debugging, and increased operational burden\n            "
+            },
+            {
+                "ChoiceId": "rel_service_architecture_business_domains",
+                "Title": "Build services focused on specific business domains and functionality",
+                "Description": "\n               SOA builds services with well-delineated functions defined by business needs. Microservices use domain models and bounded context to limit this further so that each service does just one thing.  Focusing on specific functionality enables you to differentiate the reliability requirements of different services, and target investments more specifically.  A concise business problem and having a small team associated with each service also enables easier organizational scaling.\n            "
+            },
+            {
+                "ChoiceId": "rel_service_architecture_api_contracts",
+                "Title": "Provide service contracts per API",
+                "Description": "\n               Service contracts are documented agreements between teams on service integration and include a machine-readable API definition, rate limits, and performance expectations. A versioning strategy allows clients to continue using the existing API and migrate their applications to the newer API when they are ready. Deployment can happen anytime, as long as the contract is not violated. The service provider team can use the technology stack of their choice to satisfy the API contract. Similarly, the service consumer can use their own technology."
+            },
+            {
+                "ChoiceId": "rel_service_architecture_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "prevent-interaction-failure",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you design interactions in a distributed system to prevent failures?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_prevent_interaction_failure_identify",
+                "Title": "Identify which kind of distributed system is required",
+                "Description": "\n               Hard real-time distributed systems require responses to be given synchronously and rapidly, while soft real-time systems have a more generous time window of minutes or more for response. Offline systems handle responses through batch or asynchronous processing. Hard real-time distributed systems have the most stringent reliability requirements.\n            "
+            },
+            {
+                "ChoiceId": "rel_prevent_interaction_failure_loosely_coupled_system",
+                "Title": "Implement loosely coupled dependencies",
+                "Description": "\n               Dependencies such as queuing systems, streaming systems, workflows, and load balancers are loosely coupled. Loose coupling helps isolate behavior of a component from other components that depend on it, increasing resiliency and agility\n            "
+            },
+            {
+                "ChoiceId": "rel_prevent_interaction_failure_constant_work",
+                "Title": "Do constant work",
+                "Description": "\n               Systems can fail when there are large, rapid changes in load. For example, if your workload is doing a health check that monitors the health of thousands of servers, it should send the same size payload (a full snapshot of the current state) each time. Whether no servers are failing, or all of them, the health check system is doing constant work with no large, rapid changes.\n            "
+            },
+            {
+                "ChoiceId": "rel_prevent_interaction_failure_idempotent",
+                "Title": "Make all responses idempotent",
+                "Description": "\n               An idempotent service promises that each request is completed exactly once, such that making multiple identical requests has the same effect as making a single request. An idempotent service makes it easier for a client to implement retries without fear that a request will be erroneously processed multiple times. To do this, clients can issue API requests with an idempotency token\u2014the same token is used whenever the request is repeated. An idempotent service API uses the token to return a response identical to the response that was returned the first time that the request was completed.\n            "
+            },
+            {
+                "ChoiceId": "rel_prevent_interaction_failure_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "mitigate-interaction-failure",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you design interactions in a distributed system to mitigate or withstand failures?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_graceful_degradation",
+                "Title": "Implement graceful degradation to transform applicable hard dependencies into soft dependencies",
+                "Description": "\n                    When a component's dependencies are unhealthy, the component itself can still function, although in a degraded manner. For example, when a dependency call fails, failover to a predetermined static response.\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_throttle_requests",
+                "Title": "Throttle requests",
+                "Description": "\n                    This is a mitigation pattern to respond to an unexpected increase in demand. Some requests are honored but those over a defined limit are rejected and return a message indicating they have been throttled. The expectation on clients is that they will back off and abandon the request or try again at a slower rate.\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_limit_retries",
+                "Title": "Control and limit retry calls",
+                "Description": "\n                    Use exponential backoff to retry after progressively longer intervals. Introduce jitter to randomize those retry intervals, and limit the maximum number of retries. \n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_fail_fast",
+                "Title": "Fail fast and limit queues",
+                "Description": "\n                    If the workload is unable to respond successfully to a request, then fail fast. This allows the releasing of resources associated with a request, and permits the service to recover if it\u2019s running out of resources.  If the workload is able to respond successfully but the rate of requests is too high, then use a queue to buffer requests instead. However, do not allow long queues that can result in serving stale requests that the client has already given up on.\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_client_timeouts",
+                "Title": "Set client timeouts",
+                "Description": "\n                    Set timeouts appropriately, verify them systematically, and do not rely on default values as they are generally set too high\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_stateless",
+                "Title": "Make services stateless where possible",
+                "Description": "\n                    Services should either not require state, or should offload state such that between different client requests, there is no dependence on locally stored data on disk or in memory. This enables servers to be replaced at will without causing an availability impact. Amazon ElastiCache or Amazon DynamoDB are good destinations for offloaded state.\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_emergency_levers",
+                "Title": "Implement emergency levers",
+                "Description": "\n                    These are rapid processes that may mitigate availability impact on your workload. They can be operated in the absence of a root cause. An ideal emergency lever reduces the cognitive burden on the resolvers to zero by providing fully deterministic activation and deactivation criteria. Example levers include blocking all robot traffic or serving a static response. Levers are often manual, but they can also be automated.\n                "
+            },
+            {
+                "ChoiceId": "rel_mitigate_interaction_failure_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "monitor-aws-resources",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you monitor workload resources?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_monitor_aws_resources_monitor_resources",
+                "Title": "Monitor all components for the workload (Generation)",
+                "Description": "Monitor the components of the workload with Amazon CloudWatch or third-party tools. Monitor AWS services with Personal Health Dashboard"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_notification_aggregation",
+                "Title": "Define and calculate metrics (Aggregation)",
+                "Description": "Store log data and apply filters where necessary to calculate metrics, such as counts of a specific log event, or latency calculated from log event timestamps"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_notification_monitor",
+                "Title": "Send notifications (Real-time processing and alarming)",
+                "Description": "Organizations that need to know, receive notifications when significant events occur"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_automate_response_monitor",
+                "Title": "Automate responses (Real-time processing and alarming)",
+                "Description": "Use automation to take action when an event is detected, for example, to replace failed components"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_storage_analytics",
+                "Title": "Analytics",
+                "Description": "Collect log files and metrics histories and analyze these for broader trends and workload insights"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_review_monitoring",
+                "Title": "Conduct reviews regularly",
+                "Description": "Frequently review how workload monitoring is implemented and update it based on significant events and changes"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_end_to_end",
+                "Title": "Monitor end-to-end tracing of requests through your system",
+                "Description": "Use AWS X-Ray or third-party tools so that developers can more easily analyze and debug distributed systems to understand how their applications and its underlying services are performing"
+            },
+            {
+                "ChoiceId": "rel_monitor_aws_resources_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "adapt-to-changes",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you design your workload to adapt to changes in demand?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_adapt_to_changes_autoscale_adapt",
+                "Title": "Use automation when obtaining or scaling resources",
+                "Description": "When replacing impaired resources or scaling your workload, automate the process by using managed AWS services, such as Amazon S3 and AWS Auto Scaling. You can also use third-party tools and AWS SDKs to automate scaling. "
+            },
+            {
+                "ChoiceId": "rel_adapt_to_changes_reactive_adapt_auto",
+                "Title": "Obtain resources upon detection of impairment to a workload",
+                "Description": "Scale resources reactively when necessary if availability is impacted, to restore workload availability."
+            },
+            {
+                "ChoiceId": "rel_adapt_to_changes_proactive_adapt_auto",
+                "Title": "Obtain resources upon detection that more resources are needed for a workload",
+                "Description": "Scale resources proactively to meet demand and avoid availability impact."
+            },
+            {
+                "ChoiceId": "rel_adapt_to_changes_load_tested_adapt",
+                "Title": "Load test your workload",
+                "Description": "Adopt a load testing methodology to measure if scaling activity meets workload requirements."
+            },
+            {
+                "ChoiceId": "rel_adapt_to_changes_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "tracking-change-management",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you implement change?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_tracking_change_management_planned_changemgmt",
+                "Title": "Use runbooks for standard activities such as deployment",
+                "Description": "Runbooks are the predefined steps used to achieve specific outcomes. Use runbooks to perform standard activities, whether done manually or automatically. Examples include deploying a workload, patching it, or making DNS modifications."
+            },
+            {
+                "ChoiceId": "rel_tracking_change_management_functional_testing",
+                "Title": "Integrate functional testing as part of your deployment",
+                "Description": "Functional tests are run as part of automated deployment. If success criteria are not met, the pipeline is halted or rolled back."
+            },
+            {
+                "ChoiceId": "rel_tracking_change_management_resiliency_testing",
+                "Title": "Integrate resiliency testing as part of your deployment",
+                "Description": "Resiliency tests (as part of chaos engineering) are run as part of the automated deployment pipeline in a pre-prod environment."
+            },
+            {
+                "ChoiceId": "rel_tracking_change_management_immutable_infrastructure",
+                "Title": "Deploy using immutable infrastructure",
+                "Description": "This is a model that mandates that no updates, security patches, or configuration changes happen in-place on production workloads. When a change is needed, the architecture is built onto new infrastructure and deployed into production."
+            },
+            {
+                "ChoiceId": "rel_tracking_change_management_automated_changemgmt",
+                "Title": "Deploy changes with automation",
+                "Description": "Deployments and patching are automated to eliminate negative impact."
+            },
+            {
+                "ChoiceId": "rel_tracking_change_management_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "backing-up-data",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you back up data?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_backing_up_data_identified_backups_data",
+                "Title": "Identify and back up all data that needs to be backed up, or reproduce the data from sources",
+                "Description": "Amazon S3 can be used as a backup destination for multiple data sources. AWS services such as Amazon EBS, Amazon RDS, and Amazon DynamoDB have built in capabilities to create backups. Third-party backup software can also be used. Alternatively, if the data can be reproduced from other sources to meet RPO, you might not require a backup"
+            },
+            {
+                "ChoiceId": "rel_backing_up_data_secured_backups_data",
+                "Title": "Secure and encrypt backups",
+                "Description": "Detect access using authentication and authorization, such as AWS IAM, and detect data integrity compromise by using encryption."
+            },
+            {
+                "ChoiceId": "rel_backing_up_data_automated_backups_data",
+                "Title": "Perform data backup automatically",
+                "Description": "Configure backups to be taken automatically based on a periodic schedule, or by changes in the dataset. RDS instances, EBS volumes, DynamoDB tables, and S3 objects can all be configured for automatic backup. AWS Marketplace solutions or third-party solutions can also be used."
+            },
+            {
+                "ChoiceId": "rel_backing_up_data_periodic_recovery_testing_data",
+                "Title": "Perform periodic recovery of the data to verify backup integrity and processes",
+                "Description": "Validate that your backup process implementation meets your recovery time objectives (RTO) and recovery point objectives (RPO) by performing a recovery test."
+            },
+            {
+                "ChoiceId": "rel_backing_up_data_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "fault-isolation",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you use fault isolation to protect your workload?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_fault_isolation_multiaz_region_system",
+                "Title": "Deploy the workload to multiple locations",
+                "Description": "\n               Distribute workload data and resources across multiple Availability Zones or, where necessary, across AWS Regions. These locations can be as diverse as required.\n            "
+            },
+            {
+                "ChoiceId": "rel_fault_isolation_select_location",
+                "Title": "Select the appropriate locations for your multi-location deployment",
+                "Description": "\n               Always use multiple AZs where possible within an AWS Region. For workloads that require more resiliency, also use a multi-Region strategy, such as active-passive or active-active.\n            "
+            },
+            {
+                "ChoiceId": "rel_fault_isolation_single_az_system",
+                "Title": "Automate recovery for components constrained to a single location",
+                "Description": "\n               If components of the workload can only run in a single Availability Zone or on-premises data center, you must implement the capability to do a complete rebuild of the workload within your defined recovery objectives.\n            "
+            },
+            {
+                "ChoiceId": "rel_fault_isolation_use_bulkhead",
+                "Title": "Use bulkhead architectures to limit scope of impact",
+                "Description": "\n               Like the bulkheads on a ship, this pattern ensures that a failure is contained to a small subset of requests or users so that the number of impaired requests is limited, and most can continue without error. Bulkheads for data are often called partitions, while bulkheads for services are known as cells.\n            "
+            },
+            {
+                "ChoiceId": "rel_fault_isolation_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "withstand-component-failures",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you design your workload to withstand component failures?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_withstand_component_failures_monitoring_health",
+                "Title": "Monitor all components of the workload to detect failures",
+                "Description": "Continuously monitor the health of your workload so that you and your automated systems are aware of degradation or complete failure as soon as they occur. Monitor for key performance indicators (KPIs) based on business value."
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_failover2good",
+                "Title": "Fail over to healthy resources",
+                "Description": "Ensure that if a resource failure occurs, that healthy resources can continue to serve requests. For location failures (such as Availability Zone or AWS Region) ensure you have systems in place to fail over to healthy resources in unimpaired locations."
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_auto_healing_system",
+                "Title": "Automate healing on all layers",
+                "Description": "Upon detection of a failure, use automated capabilities to perform actions to remediate."
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_avoid_control_plane",
+                "Title": "Rely on the data plane and not the control plane during recovery",
+                "Description": "\n               The control plane is used to configure resources, and the data plane delivers services. Data planes typically have higher availability design goals than control planes and are usually less complex. When implementing recovery or mitigation responses to potentially resiliency-impacting events, using control plane operations can lower the overall resiliency of your architecture.  For example, you can rely on the Amazon Route 53 data plane to reliably route DNS queries based on health checks, but updating Route 53 routing policies uses the control plane, so do not rely on it for recovery.\n            "
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_static_stability",
+                "Title": "Use static stability to prevent bimodal behavior",
+                "Description": "Bimodal behavior is when your workload exhibits different behavior under normal and failure modes, for example, relying on launching new instances if an Availability Zone fails. You should instead build workloads that are statically stable and operate in only one mode. In this case, provision enough instances in each Availability Zone to handle the workload load if one AZ were removed and then use Elastic Load Balancing or Amazon Route 53 health checks to shift load away from the impaired instances."
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_notifications_sent_system",
+                "Title": "Send notifications when events impact availability",
+                "Description": "Notifications are sent upon the detection of significant events, even if the issue caused by the event was automatically resolved."
+            },
+            {
+                "ChoiceId": "rel_withstand_component_failures_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "testing-resiliency",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you test reliability?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_testing_resiliency_playbook_resiliency",
+                "Title": "Use playbooks to investigate failures",
+                "Description": "Enable consistent and prompt responses to failure\n               scenarios that are not well understood, by documenting the investigation process in\n               playbooks. Playbooks are the predefined steps performed to identify the factors\n               contributing to a failure scenario. The results from any process step are used to\n               determine the next steps to take until the issue is identified or\n               escalated."
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_rca_resiliency",
+                "Title": "Perform post-incident analysis",
+                "Description": "Review customer-impacting events, and identify the\n               contributing factors and preventative action items. Use this information to develop\n               mitigations to limit or prevent recurrence. Develop procedures for prompt and\n               effective responses. Communicate contributing factors and corrective actions as\n               appropriate, tailored to target audiences. Have a method to communicate these causes\n               to others as needed."
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_test_functional",
+                "Title": "Test functional requirements",
+                "Description": "These include unit tests and integration tests that validate required functionality."
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_test_non_functional",
+                "Title": "Test scaling and performance requirements",
+                "Description": "This includes load testing to validate that the workload meets scaling and performance requirements."
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_failure_injection_resiliency",
+                "Title": "Test resiliency using chaos engineering",
+                "Description": "Run tests that inject failures regularly into pre-production and production environments. Hypothesize how your workload will react to the failure, then compare your hypothesis to the testing results and iterate if they do not match. Ensure that production testing does not impact users."
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_game_days_resiliency",
+                "Title": "Conduct game days regularly",
+                "Description": "\n               Use game days to regularly exercise your procedures for responding to events and failures as close to production as possible (including in production environments) with the people who will be involved in actual failure scenarios. Game days enforce measures to ensure that production events do not impact users.\n            "
+            },
+            {
+                "ChoiceId": "rel_testing_resiliency_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    },
+    {
+        "QuestionId": "planning-for-recovery",
+        "PillarId": "reliability",
+        "QuestionTitle": "How do you plan for disaster recovery (DR)?",
+        "Choices": [
+            {
+                "ChoiceId": "rel_planning_for_recovery_objective_defined_recovery",
+                "Title": "Define recovery objectives for downtime and data loss",
+                "Description": "The workload has a recovery time objective (RTO) and recovery point objective (RPO)."
+            },
+            {
+                "ChoiceId": "rel_planning_for_recovery_disaster_recovery",
+                "Title": "Use defined recovery strategies to meet the recovery objectives",
+                "Description": "\n               A disaster recovery (DR) strategy has been defined to meet your workload objectives. Choose a strategy such as: backup and restore; standby (active/passive); or active/active.\n            "
+            },
+            {
+                "ChoiceId": "rel_planning_for_recovery_dr_tested",
+                "Title": "Test disaster recovery implementation to validate the implementation",
+                "Description": "Regularly test failover to DR to ensure that RTO and RPO are met."
+            },
+            {
+                "ChoiceId": "rel_planning_for_recovery_config_drift",
+                "Title": "Manage configuration drift at the DR site or Region",
+                "Description": "Ensure that the infrastructure, data, and configuration are as needed at the DR site or Region.  For example, check that AMIs and service quotas are up to date."
+            },
+            {
+                "ChoiceId": "rel_planning_for_recovery_auto_recovery",
+                "Title": "Automate recovery",
+                "Description": "Use AWS or third-party tools to automate system recovery and route traffic to the DR site or Region."
+            },
+            {
+                "ChoiceId": "rel_planning_for_recovery_no",
+                "Title": "None of these",
+                "Description": ""
+            }
+        ],
+        "SelectedChoices": [],
+        "ChoiceAnswerSummaries": [],
+        "IsApplicable": true,
+        "Risk": "UNANSWERED"
+    }
+]

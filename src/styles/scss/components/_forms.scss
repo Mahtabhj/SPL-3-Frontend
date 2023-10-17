@@ -1,0 +1,214 @@
+.container-fluid {
+  padding: 0px;
+}
+.row > *{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.container{
+  .row{margin-left: -15px; margin-right: -15px;}
+}
+.row{ margin-left: 0; margin-right: 0;}
+
+.app-auth {
+  $color-grey: #6c757d;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 6.57%, #f6f6f6 100%);
+
+  .form-left {
+    height: 100%;
+    min-height: 100vh;
+    &-logo{
+        padding: 20px 30px;
+    }
+    &-container{
+        padding: 1.5rem 9rem;
+        @include media-breakpoint-down(sm) {
+          padding: 1.5rem 1rem;
+        }
+        .forgot-pass-description{
+          padding-top: 150px;
+        }
+    }
+    &-description {
+      h4{
+        color: $color-primary;
+      }
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+    .nav-tabs {
+      background-color: #f8f8f8;
+      border-radius: 50px;
+      width: fit-content;
+      border: none;
+      .nav-link {
+        padding: 10px 30px;
+        border-radius: 50px;
+        color: $color-primary;
+      }
+      .nav-link.active {
+        color: $color-white;
+        background-color: $color-primary;
+        border-color: var(--bs-nav-tabs-link-active-border-color);
+      }
+    }
+    .form-label {
+      font-weight: 500;
+      font-size: 14px;
+      color: $color-primary;
+      margin-bottom: 0.2rem;
+    }
+    input {
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      
+        &:not(:first-child) {
+          &:not(.dropdown-menu) {
+            &:not(.valid-tooltip) {
+              &:not(.valid-feedback) {
+                &:not(.invalid-tooltip) {
+                  &:not(.invalid-feedback) {
+                    margin-left: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .password-toggle {
+          cursor: pointer;
+          color: $color-grey;
+          border: 0;
+          background-color: transparent;
+          padding: 0;
+          position: relative;
+          cursor: pointer;
+          margin-left: -35px;
+          z-index: 20;
+          &:hover {
+            color: $color-grey;
+          }
+          svg {
+            width: 1.5em;
+            height: 1.5em;
+          }
+        }
+    }
+    .form-button {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 1rem;
+      color: $color-white;
+      border: none;
+      background-color: $color-primary;
+      width: 100%;
+    }
+    .form-forgot-password {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 20px;
+      a {
+        color: $color-primary;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .form-social-button {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 20px;
+
+      @include media-breakpoint-down(sm) {
+        flex-direction: column;
+      }
+
+      &__icon {
+        font-size: 16px;
+        margin-right: 10px;
+        position: relative;
+      }
+      button {
+        display: flex;
+        flex-direction: row;
+        border: 1px solid rgb(212, 212, 212);
+        width: 40%;
+        padding: 10px 20px;
+        color: $color-primary;
+        font-size: 12px;
+        background-color: $color-white;
+        
+      @include media-breakpoint-down(sm) {
+        
+        width: 100%;
+      }
+      }
+    }
+    .form-link{
+      color: $color-primary;
+    }
+  }
+  .form-right {
+    background-color: $color-primary;
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 70%;
+      margin: auto;
+    }
+
+  }
+  .error-message {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    font-size: 14px;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+   //loading circle for sign in and log in
+ .loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #002130;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.text-blue {
+  color: $color-primary;
+}
+
+}
+
+
+

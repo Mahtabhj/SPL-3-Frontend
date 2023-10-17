@@ -1,0 +1,30 @@
+//global 
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/global';
+
+//vendors
+@import 'vendors/bootstrap/bootstrap.scss';
+
+//components
+
+@import 'components/forms';
+@import 'components/dashboard';
+@import 'components/wafr';
+@import 'components/logs';
+@import 'components/header';
+@import 'components/modals';
+@import 'components/viewwafr';
+@import 'components/assessment';
+@import 'components/account';
+@import 'components/settings';
+
+//layout
+@import 'layout/header';
+@import 'layout/sidebar';
+@import 'layout/footer';
+
+//pages
+@import 'pages/generic';
+@import 'pages/home';
+
