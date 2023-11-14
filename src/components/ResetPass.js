@@ -19,7 +19,7 @@ const ResetPass = () => {
     setLoading(true);
     setErorrMsgs(null);
     await axios
-      .post("https://cloudpoint.brainstation-23.com/api/password-reset/", {
+      .post("http://localhost:8000/api/password-reset/", {
         password,
         code,
       })

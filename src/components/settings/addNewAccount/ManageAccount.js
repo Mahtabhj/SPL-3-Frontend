@@ -94,7 +94,7 @@ function ManageAccount() {
       console.log(payload);
 
       const response = await axios.post(
-        "https://cloudpoint.brainstation-23.com/api/aws-accounts/",
+        "http://localhost:8000/api/aws-accounts/",
         payload,
         {
           headers: {

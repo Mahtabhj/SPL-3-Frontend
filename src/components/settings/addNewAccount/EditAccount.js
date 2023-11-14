@@ -25,7 +25,7 @@ function EditAccount() {
     };
 
     fetch(
-      `https://cloudpoint.brainstation-23.com/api/get-account/?account_id=${account_id}`,
+      `http://localhost:8000/api/get-account/?account_id=${account_id}`,
       requestOptions
     )
       .then(async (response) => {
@@ -56,7 +56,7 @@ function EditAccount() {
     };
 
     fetch(
-      `https://cloudpoint.brainstation-23.com/api/aws-accounts/${account?.id}/`,
+      `http://localhost:8000/api/aws-accounts/${account?.id}/`,
       requestOptions
     )
       .then(async (response) => {

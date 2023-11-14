@@ -15,7 +15,7 @@ function ForgotPass() {
     console.log("clicked");
 
     await axios.post(
-      "https://cloudpoint.brainstation-23.com/api/send-password-reset-code/",
+      "http://localhost:8000/api/send-password-reset-code/",
       {
         email,
       }

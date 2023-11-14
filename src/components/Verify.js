@@ -19,7 +19,7 @@ function Verify() {
     console.log("clicked");
 
     await axios.post(
-      "https://cloudpoint.brainstation-23.com/api/verify/",
+      "http://localhost:8000/api/verify/",
       {
         email,
         otp,

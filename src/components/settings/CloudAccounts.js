@@ -29,7 +29,7 @@ function AccountSettings() {
   const handleDeleteAccount = async () => {
     try {
       await axios.delete(
-        `https://cloudpoint.brainstation-23.com/api/aws-accounts/${accountToDelete.id}`,
+        `http://localhost:8000/api/aws-accounts/${accountToDelete.id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ function AccountSettings() {
     // get the list of account IDs
     const getAllAccounts = async () => {
       const url =
-        "https://cloudpoint.brainstation-23.com/api/get-aws-account-list/";
+        "http://localhost:8000/api/get-aws-account-list/";
       const token = localStorage.getItem("access_token");
 
       try {

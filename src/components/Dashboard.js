@@ -23,7 +23,7 @@ const Dashboard = () => {
     const getLastAddeddAccount = async () => {
       console.log("Called APi");
       const url =
-        "https://cloudpoint.brainstation-23.com/api/get-last-added-aws-account/";
+        "http://localhost:8000/api/get-last-added-aws-account/";
 
       try {
         const response = await axios.get(url, {
@@ -53,7 +53,7 @@ const Dashboard = () => {
     // get the list of account IDs
     const getAccountIds = async () => {
       const url =
-        "https://cloudpoint.brainstation-23.com/api/get-aws-account-list/";
+        "http://localhost:8000/api/get-aws-account-list/";
 
       try {
         const response = await axios.get(url, {
@@ -73,7 +73,7 @@ const Dashboard = () => {
     // get billing data with accountName
     const handleRetrieveBillingData = async (accountId) => {
       const url =
-        "https://cloudpoint.brainstation-23.com/api/get-billing-data/";
+        "http://localhost:8000/api/get-billing-data/";
       const payload = {
         account_id: accountId,
       };

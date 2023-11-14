@@ -25,7 +25,7 @@ function ChangePassword() {
 
     try {
       await axios.put(
-        "https://cloudpoint.brainstation-23.com/api/change-password/",
+        "http://localhost:8000/api/change-password/",
         {
           old_password: oldPassword,
           new_password: newPassword,

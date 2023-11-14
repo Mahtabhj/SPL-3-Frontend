@@ -24,7 +24,7 @@ function TeamMembers() {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://cloudpoint.brainstation-23.com/api/users/",
+          "http://localhost:8000/api/users/",
           {
             headers: {
               Authorization: `Bearer ${token}`,

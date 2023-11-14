@@ -31,7 +31,7 @@ function MyProfile() {
     const fetchUserProfileImage = async () => {
       try {
         const response = await axios.get(
-          "https://cloudpoint.brainstation-23.com/api/user-profile/",
+          "http://localhost:8000/api/user-profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ function MyProfile() {
       Authorization: `Bearer ${token}`,
     }; // Add the token to the headers
 
-    fetch("https://cloudpoint.brainstation-23.com/api/user-profile/", {
+    fetch("http://localhost:8000/api/user-profile/", {
       method: "POST",
       headers,
       body: formData,
@@ -93,7 +93,7 @@ function MyProfile() {
     const fetchUserProfileImage = async () => {
       try {
         const response = await axios.get(
-          "https://cloudpoint.brainstation-23.com/api/user-profile/",
+          "http://localhost:8000/api/user-profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -154,7 +154,7 @@ function MyProfile() {
       const data = getUpdatedData();
 
       await axios.put(
-        `https://cloudpoint.brainstation-23.com/api/users/${userId}/`,
+        `http://localhost:8000/api/users/${userId}/`,
         data,
         {
           headers: {

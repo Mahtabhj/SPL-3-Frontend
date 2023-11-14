@@ -69,7 +69,7 @@ function SignInSignUp() {
     setPhoneError("");
 
     try {
-      await axios.post("https://cloudpoint.brainstation-23.com/api/register/", {
+      await axios.post("http://localhost:8000/api/register/", {
         first_name: firstName,
         last_name: lastName,
         username: username,

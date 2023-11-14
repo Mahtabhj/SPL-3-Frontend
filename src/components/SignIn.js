@@ -24,7 +24,7 @@ const SignIn = () => {
 
     const response = await axios
       .post(
-        "https://cloudpoint.brainstation-23.com/api/token/",
+        "http://localhost:8000/api/token/",
         {
           email,
           password,
@@ -32,24 +32,31 @@ const SignIn = () => {
         { withCredentials: true }
       )
       .catch((error) => {
+        if(error.response){
         if (error.response.status === 400)
           setEmailError("Invalid email address");
         else if (error.response.status === 401)
           setPasswordError("Password is invalid");
+        else {
+          console.error("Unexpected server error:", error);
+        }
         setLoading(false);
         console.log(error);
-      });
+      }});
 
-    const token = response.data.access;
-    const profileImageResponse = await axios.get(
-      "https://cloudpoint.brainstation-23.com/api/user-profile/",
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
-    );
-    localStorage.setItem("profile_image", profileImageResponse.data.image_url);
+    
+        const token = response.data.access;
+  
+     
+    // const profileImageResponse = await axios.get(
+    //   "http://localhost:8000/api/user-profile/",
+    //   {
+    //     headers: {
+    //       Authorization: `Bearer ${token}`,
+    //     },
+    //   }
+    // );
+    localStorage.setItem("profile_image", "1.jpg");
 
     const decodedToken = jwt_decode(token);
     const userId = decodedToken.user_id;
@@ -63,7 +70,7 @@ const SignIn = () => {
   const fetchUser = async (userId, token) => {
     try {
       const response = await axios.get(
-        "https://cloudpoint.brainstation-23.com/api/users/" + userId + "/",
+        "http://localhost:8000/api/users/" + userId + "/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
