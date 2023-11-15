@@ -23,7 +23,7 @@ const Dashboard = () => {
     const getLastAddeddAccount = async () => {
       console.log("Called APi");
       const url =
-        "http://localhost:8000/api/get-last-added-aws-account/";
+        "http://54.173.112.117:8000/api/get-last-added-aws-account/";
 
       try {
         const response = await axios.get(url, {
@@ -53,7 +53,7 @@ const Dashboard = () => {
     // get the list of account IDs
     const getAccountIds = async () => {
       const url =
-        "http://localhost:8000/api/get-aws-account-list/";
+        "http://54.173.112.117:8000/api/get-aws-account-list/";
 
       try {
         const response = await axios.get(url, {
@@ -73,7 +73,7 @@ const Dashboard = () => {
     // get billing data with accountName
     const handleRetrieveBillingData = async (accountId) => {
       const url =
-        "http://localhost:8000/api/get-billing-data/";
+        "http://54.173.112.117:8000/api/get-billing-data/";
       const payload = {
         account_id: accountId,
       };

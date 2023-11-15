@@ -31,7 +31,7 @@ function MyProfile() {
     const fetchUserProfileImage = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/user-profile/",
+          "http://54.173.112.117:8000/api/user-profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -69,7 +69,7 @@ function MyProfile() {
       Authorization: `Bearer ${token}`,
     }; // Add the token to the headers
 
-    fetch("http://localhost:8000/api/user-profile/", {
+    fetch("http://54.173.112.117:8000/api/user-profile/", {
       method: "POST",
       headers,
       body: formData,
@@ -93,7 +93,7 @@ function MyProfile() {
     const fetchUserProfileImage = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/user-profile/",
+          "http://54.173.112.117:8000/api/user-profile/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -154,7 +154,7 @@ function MyProfile() {
       const data = getUpdatedData();
 
       await axios.put(
-        `http://localhost:8000/api/users/${userId}/`,
+        `http://54.173.112.117:8000/api/users/${userId}/`,
         data,
         {
           headers: {

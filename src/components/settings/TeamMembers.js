@@ -24,7 +24,7 @@ function TeamMembers() {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/users/",
+          "http://54.173.112.117:8000/api/users/",
           {
             headers: {
               Authorization: `Bearer ${token}`,

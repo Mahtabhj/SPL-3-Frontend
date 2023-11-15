@@ -15,7 +15,7 @@ function ForgotPass() {
     console.log("clicked");
 
     await axios.post(
-      "http://localhost:8000/api/send-password-reset-code/",
+      "http://54.173.112.117:8000/api/send-password-reset-code/",
       {
         email,
       }

@@ -58,23 +58,41 @@ const Wafr = (props) => {
   };
 
   // get the list of account IDs
-  const getAccountIds = async () => {
-    const url =
-      "http://localhost:8000/api/get-aws-account-list/";
+  // const getAccountIds = async () => {
+  //   const url =
+  //     "http://54.173.112.117:8000/api/get-aws-account-list/";
 
+  //   try {
+  //     const response = await axios.get(url, {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     });
+
+  //     const accounts = response.data.map((account) => account.account_id);
+  //     setAccountIds(accounts);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+  const getAccountIds = async () => {
+    const url = "http://54.173.112.117:8000/api/get-aws-account-list/";
+  
     try {
       const response = await axios.get(url, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-
+  
       const accounts = response.data.map((account) => account.account_id);
       setAccountIds(accounts);
     } catch (error) {
       console.error(error);
     }
   };
+  
+
 
   const handleCreateWorkLoad = (e) => {
     e.preventDefault();
@@ -95,7 +113,7 @@ const Wafr = (props) => {
     };
 
     fetch(
-      `http://localhost:8000/api/workloads/?account_id=${workload.accountId}`,
+      `http://54.173.112.117:8000/api/workloads/?account_id=${workload.accountId}`,
       requestOptions
     )
       .then(async (response) => {
@@ -125,7 +143,7 @@ const Wafr = (props) => {
   const getWorkloadData = (id) => {
     axios
       .get(
-        `http://localhost:8000/api/workloads/view/?workloadId=${id}&account_id=${accountId}`
+        `http://54.173.112.117:8000/api/workloads/view/?workloadId=${id}&account_id=${accountId}`
       )
       .then((response) => {
         setSelectedWorkload(response.data);
@@ -149,7 +167,7 @@ const Wafr = (props) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/workloads/?account_id=${accountId}`,
+        `http://54.173.112.117:8000/api/workloads/?account_id=${accountId}`,
         updatedWorkload,
         {
           headers: {
@@ -179,7 +197,7 @@ const Wafr = (props) => {
       console.log("WORKLOAD TO DELETE: ", workloadToDelete);
 
       const response = await axios.delete(
-        `http://localhost:8000/api/workloads/?workloadId=${workloadToDelete.WorkloadId}&account_id=${accountId}`,
+        `http://54.173.112.117:8000/api/workloads/?workloadId=${workloadToDelete.WorkloadId}&account_id=${accountId}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -209,7 +227,7 @@ const Wafr = (props) => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/workloads/?account_id=${accountId}`,
+        `http://54.173.112.117:8000/api/workloads/?account_id=${accountId}`,
         {
           method: "GET",
           headers: {
@@ -238,7 +256,7 @@ const Wafr = (props) => {
   // useEffect(() => {
   //   const fetchData = async () => {
   //     const token = localStorage.getItem("access_token");
-  //     const response = await fetch("http://localhost:8000/api/lense/", {
+  //     const response = await fetch("http://54.173.112.117:8000/api/lense/", {
   //       method: "GET",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -256,7 +274,7 @@ const Wafr = (props) => {
   //   const fetchRegions = async () => {
   //     const token = localStorage.getItem("access_token");
   //     const response = await fetch(
-  //       `http://localhost:8000/api/regions/?account_id=${accountId}`,
+  //       `http://54.173.112.117:8000/api/regions/?account_id=${accountId}`,
   //       {
   //         method: "GET",
   //         headers: {

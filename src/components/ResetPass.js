@@ -19,7 +19,7 @@ const ResetPass = () => {
     setLoading(true);
     setErorrMsgs(null);
     await axios
-      .post("http://localhost:8000/api/password-reset/", {
+      .post("http://54.173.112.117:8000/api/password-reset/", {
         password,
         code,
       })

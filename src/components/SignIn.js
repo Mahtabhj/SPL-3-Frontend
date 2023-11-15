@@ -24,7 +24,7 @@ const SignIn = () => {
 
     const response = await axios
       .post(
-        "http://localhost:8000/api/token/",
+        "http://54.173.112.117:8000/api/token/",
         {
           email,
           password,
@@ -49,7 +49,7 @@ const SignIn = () => {
   
      
     // const profileImageResponse = await axios.get(
-    //   "http://localhost:8000/api/user-profile/",
+    //   "http://54.173.112.117:8000/api/user-profile/",
     //   {
     //     headers: {
     //       Authorization: `Bearer ${token}`,
@@ -70,7 +70,7 @@ const SignIn = () => {
   const fetchUser = async (userId, token) => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/api/users/" + userId + "/",
+        "http://54.173.112.117:8000/api/users/" + userId + "/",
         {
           headers: {
             Authorization: `Bearer ${token}`,

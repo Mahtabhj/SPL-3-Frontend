@@ -94,7 +94,7 @@ function ManageAccount() {
       console.log(payload);
 
       const response = await axios.post(
-        "http://localhost:8000/api/aws-accounts/",
+        "http://54.173.112.117:8000/api/aws-accounts/",
         payload,
         {
           headers: {

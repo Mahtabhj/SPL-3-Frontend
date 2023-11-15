@@ -25,7 +25,7 @@ function ChangePassword() {
 
     try {
       await axios.put(
-        "http://localhost:8000/api/change-password/",
+        "http://54.173.112.117:8000/api/change-password/",
         {
           old_password: oldPassword,
           new_password: newPassword,

@@ -25,7 +25,7 @@ function EditAccount() {
     };
 
     fetch(
-      `http://localhost:8000/api/get-account/?account_id=${account_id}`,
+      `http://54.173.112.117:8000/api/get-account/?account_id=${account_id}`,
       requestOptions
     )
       .then(async (response) => {
@@ -56,7 +56,7 @@ function EditAccount() {
     };
 
     fetch(
-      `http://localhost:8000/api/aws-accounts/${account?.id}/`,
+      `http://54.173.112.117:8000/api/aws-accounts/${account?.id}/`,
       requestOptions
     )
       .then(async (response) => {

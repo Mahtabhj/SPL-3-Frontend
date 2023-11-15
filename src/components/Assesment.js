@@ -59,7 +59,7 @@ function Assesment(props) {
 
     const token = localStorage.getItem("access_token");
     const response = await fetch(
-      `http://localhost:8000/api/questions/?workloadId=${workloadId}&lensAlias=wellarchitected&pillarId=${pillarId}&account_id=${accountId}`,
+      `http://54.173.112.117:8000/api/questions/?workloadId=${workloadId}&lensAlias=wellarchitected&pillarId=${pillarId}&account_id=${accountId}`,
       {
         method: "GET",
         headers: {
@@ -125,7 +125,7 @@ function Assesment(props) {
     };
 
     fetch(
-      `http://localhost:8000/api/questions/answer/?workloadId=${workloadId}&lensAlias=${lenseAlias}&account_id=${accountId}`,
+      `http://54.173.112.117:8000/api/questions/answer/?workloadId=${workloadId}&lensAlias=${lenseAlias}&account_id=${accountId}`,
       requestOptions
     )
       .then(async (response) => {
@@ -144,7 +144,7 @@ function Assesment(props) {
   const getWorkloadData = () => {
     axios
       .get(
-        `http://localhost:8000/api/workloads/view/?workloadId=${workloadId}&account_id=${accountId}`
+        `http://54.173.112.117:8000/api/workloads/view/?workloadId=${workloadId}&account_id=${accountId}`
       )
       .then((response) => {
         setWorkload(response.data);
@@ -159,7 +159,7 @@ function Assesment(props) {
   const downloadReport = () => {
     axios
       .get(
-        `http://localhost:8000/api/reports/pdf/?workloadId=${workloadId}&lensAlias=${lenseAlias}&account_id=${accountId}`,
+        `http://54.173.112.117:8000/api/reports/pdf/?workloadId=${workloadId}&lensAlias=${lenseAlias}&account_id=${accountId}`,
         { responseType: "blob" }
       )
       .then((response) => {

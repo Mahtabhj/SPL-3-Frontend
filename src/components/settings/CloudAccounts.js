@@ -29,7 +29,7 @@ function AccountSettings() {
   const handleDeleteAccount = async () => {
     try {
       await axios.delete(
-        `http://localhost:8000/api/aws-accounts/${accountToDelete.id}`,
+        `http://54.173.112.117:8000/api/aws-accounts/${accountToDelete.id}`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -57,7 +57,7 @@ function AccountSettings() {
     // get the list of account IDs
     const getAllAccounts = async () => {
       const url =
-        "http://localhost:8000/api/get-aws-account-list/";
+        "http://54.173.112.117:8000/api/get-aws-account-list/";
       const token = localStorage.getItem("access_token");
 
       try {
